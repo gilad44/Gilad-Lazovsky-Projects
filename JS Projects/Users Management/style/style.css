@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  background-color: rgb(255, 248, 241);
+  padding: 10px;
+}
+
+.sectionTitle {
+  border-bottom: 1px solid black;
+  width: 40%;
+}
+
+.register-form,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid #3a3158;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+  border-radius: 10px;
+  background-color: #cae6f4;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #1f4974;
+}
+
+button:hover {
+  background-color: #357abd;
+}
+
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+#users-table {
+  width: 100%;
+
+  thead {
+    tr {
+
+      th {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+
+    td {
+      text-align: center;
+    }
+  }
+
+  #users-table-body {
+    button {
+      width: 33%;
+      height: 20px;
+      padding: 0px 20px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: 1px solid #1f4974;
+
+    }
+  }
+
+  thead {
+    background-color: #f1f1f1;
+  }
+}
+
+.container-users {
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+}
+
+#editUserContainer {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease;
+
+  .edit-user-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    margin: 20px auto;
+    padding: 45px;
+    background-color: rgb(126, 187, 223);
+    border-radius: 12px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  label {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 1px solid #3a3158;
+    transition: all 0.3s ease;
+    background-color: transparent;
+  }
+
+  input:focus {
+    outline: none;
+    border-radius: 10px;
+    background-color: #cae6f4;
+  }
+
+  button {
+    padding: 12px 20px;
+    background-color: #083f7e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #1f4974;
+  }
+
+  button:hover {
+    background-color: #357abd;
+  }
+}
