@@ -1,0 +1,620 @@
+@font-face {
+  font-family: dybbuk;
+  src: url(../Fonts/Dybbuk.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: assistant;
+}
+
+#main {
+  height: 80px;
+  background: radial-gradient(rgba(167, 225, 248, 0.692) 40%, rgb(156, 189, 239));
+  -webkit-box-shadow: 0 0 50px 10px rgb(156, 189, 239);
+          box-shadow: 0 0 50px 10px rgb(156, 189, 239);
+}
+#main #navBarBrand {
+  font-family: dybbuk;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  font-size: 45px;
+}
+#main #lang img {
+  width: 80px;
+  height: 54px;
+}
+#main #TopBar {
+  margin-left: 500px;
+  direction: rtl;
+}
+#main li {
+  font-size: 23px !important;
+  font-weight: 600;
+  direction: rtl;
+}
+#main li :hover {
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 20px 5px skyblue;
+          box-shadow: 0 0 20px 5px skyblue;
+}
+
+#mainTitle {
+  letter-spacing: 3px;
+}
+
+#techno img {
+  width: 40px;
+  height: 40px;
+  margin: 5px 20px;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  height: 900px;
+  background-color: rgb(76, 135, 155);
+  padding-bottom: 30px;
+  scroll-margin-top: 80px;
+}
+#about h1 {
+  margin-bottom: 25px;
+}
+#about p {
+  font-weight: 600;
+}
+#about #photo {
+  width: 130px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#about #photo img {
+  width: 190px;
+  height: 210px;
+}
+#about #text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 50%;
+  font-size: 20px;
+  background-color: rgba(167, 225, 248, 0.692);
+  -webkit-box-shadow: 0 0 20px 10px rgb(46, 90, 55);
+          box-shadow: 0 0 20px 10px rgb(46, 90, 55);
+  margin-top: 30px;
+  padding: 70px 50px 60px 50px;
+  direction: rtl;
+}
+#about #resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 60px 0 0 0px;
+}
+#about #resume button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-weight: 600;
+  -webkit-box-shadow: 0 0 20px 0px rgb(156, 189, 239);
+          box-shadow: 0 0 20px 0px rgb(156, 189, 239);
+}
+#about #resume button a {
+  color: black;
+  text-decoration: none;
+}
+
+#gallery {
+  letter-spacing: 3px;
+  scroll-margin-top: 80px;
+}
+
+#works {
+  height: 100%;
+}
+#works #box {
+  width: 80%;
+  height: auto;
+  -webkit-box-shadow: 0.5px 0.5px 10px 3px inset;
+          box-shadow: 0.5px 0.5px 10px 3px inset;
+}
+#works #box .sectionTitle {
+  width: 100%;
+}
+#works #box .sectionTitle h1 {
+  font-size: 50px;
+  text-align: center;
+}
+#works #box .card {
+  width: 250px;
+  height: 400px;
+  direction: rtl;
+  text-align: center;
+}
+#works #box .card img {
+  width: 200px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#works #box .card .card-footer .container {
+  width: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgb(10, 125, 166)));
+  background: linear-gradient(white, rgb(10, 125, 166));
+  -webkit-box-shadow: 0px 0px 10px 10px white;
+          box-shadow: 0px 0px 10px 10px white;
+  border-radius: 30px;
+}
+#works #box .card .card-footer a {
+  font-weight: 600;
+}
+#works #javascriptSection {
+  width: 80%;
+  height: auto;
+  -webkit-box-shadow: 0.5px 0.5px 10px 3px inset;
+          box-shadow: 0.5px 0.5px 10px 3px inset;
+  z-index: 1;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#works #javascriptSection .sectionTitle {
+  width: 100%;
+}
+#works #javascriptSection .sectionTitle h1 {
+  font-size: 50px;
+  text-align: center;
+}
+#works #javascriptSection .card {
+  width: 250px;
+  height: 400px;
+  direction: rtl;
+  text-align: center;
+}
+#works #javascriptSection .card img {
+  width: 200px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#works #javascriptSection .card .card-footer .container {
+  width: 150px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgb(10, 125, 166)));
+  background: linear-gradient(white, rgb(10, 125, 166));
+  -webkit-box-shadow: 0px 0px 10px 10px white;
+          box-shadow: 0px 0px 10px 10px white;
+  border-radius: 30px;
+}
+#works #javascriptSection .card .card-footer a {
+  font-weight: 600;
+}
+
+#contact {
+  background-color: rgb(76, 135, 155);
+  direction: rtl;
+  scroll-margin-top: 80px;
+  z-index: 1;
+}
+#contact div {
+  font-weight: 600;
+}
+#contact div img {
+  -webkit-box-shadow: -3px 3px 10px 0px rgb(0, 0, 0);
+          box-shadow: -3px 3px 10px 0px rgb(0, 0, 0);
+}
+#contact form label {
+  font-size: 18px;
+  width: 80px;
+}
+#contact form input {
+  border: none;
+  margin-bottom: 10px;
+  width: 300px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgb(0, 0, 0);
+          box-shadow: 3px 3px 10px 0px rgb(0, 0, 0);
+}
+#contact form textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 150px;
+  margin: -20px 83px 0 0;
+  -webkit-box-shadow: 3px 3px 10px 0px rgb(0, 0, 0);
+          box-shadow: 3px 3px 10px 0px rgb(0, 0, 0);
+}
+#contact form #send {
+  font-weight: 600;
+  width: 300px;
+  height: 30px;
+  border-radius: 30px;
+  margin: 20px 83px 40px 0px;
+  -webkit-box-shadow: 3px 3px 10px 0px rgb(0, 0, 0);
+          box-shadow: 3px 3px 10px 0px rgb(0, 0, 0);
+}
+
+#social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(6, 6, 6);
+  position: fixed;
+  bottom: 0;
+}
+#social img {
+  -webkit-filter: drop-shadow(0px 0px 5px skyblue);
+          filter: drop-shadow(0px 0px 5px skyblue);
+}
+
+@media (max-width: 376px) {
+  #main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #main #navBarBrand {
+    width: 40px !important;
+    font-size: 20px !important;
+    margin-left: -5px !important;
+  }
+  #main #lang {
+    margin-left: 150px !important;
+    width: 25px;
+    height: 35px;
+  }
+  #main #lang img {
+    width: 40px !important;
+    height: 27px !important;
+  }
+  #main #TopBar {
+    margin-top: 10px !important;
+  }
+  #main #TopBar li {
+    text-align: center !important;
+    height: 59px !important;
+    width: 378px !important;
+    margin-left: -440px !important;
+    margin-right: 55px !important;
+    background: radial-gradient(skyblue 10%, whitesmoke);
+  }
+  #mainTitle {
+    margin: 0;
+    padding: 0;
+  }
+  #about {
+    height: auto;
+    scroll-margin-top: 60px;
+  }
+  #about #photo {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  #about #photo img {
+    width: 150px !important;
+    height: 170px !important;
+  }
+  #about #text {
+    width: 80%;
+    font-weight: 600;
+    gap: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+    height: 70%;
+    font-size: 18px;
+    padding: 30px 40px;
+  }
+  #about #text h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  #about #resume button {
+    margin-bottom: 70px;
+  }
+  #gallery {
+    scroll-margin-top: 60px;
+  }
+  #works {
+    padding-bottom: 50px !important;
+    height: 350% !important;
+  }
+  #works #box {
+    width: 90% !important;
+    gap: 20px !important;
+    height: 350% !important;
+  }
+  #contact {
+    height: 600px;
+    padding-top: 10px;
+    scroll-margin-top: 60px;
+  }
+  #contact div img {
+    visibility: hidden;
+    margin: 0px -470px 0 0px !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 0px !important;
+    height: 0px !important;
+  }
+  #contact form {
+    margin-right: 100px !important;
+    margin-top: 30px !important;
+  }
+  #contact form div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #contact form div label {
+    margin-bottom: 0px !important;
+    font-size: 16px;
+  }
+  #contact form div input {
+    width: 240px !important;
+  }
+  #contact form div textarea {
+    width: 240px !important;
+    margin-right: 0px !important;
+    margin-top: 5px !important;
+  }
+  #contact form #send {
+    width: 240px !important;
+    margin: 20px 0px 40px 0px !important;
+  }
+  #social {
+    height: 50px;
+  }
+  #social img {
+    width: auto !important;
+    height: 80% !important;
+    -webkit-filter: drop-shadow(0px 0px 5px skyblue);
+            filter: drop-shadow(0px 0px 5px skyblue);
+  }
+}
+@media (max-width: 768px) and (min-width: 377px) {
+  #main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  #main #navBarBrand {
+    font-family: dybbuk;
+    width: 50px;
+    font-size: 35px !important;
+  }
+  #main #lang {
+    margin-left: 450px;
+    margin-bottom: 15px;
+    width: 25px;
+    height: 35px;
+  }
+  #main #lang img {
+    width: 50px !important;
+    height: 37px !important;
+  }
+  #main #TopBar {
+    margin-top: -16px !important;
+  }
+  #main li {
+    text-align: center !important;
+    height: 59px !important;
+    width: 835px !important;
+    padding: 5px 0 0 50px !important;
+    margin: 0 0px 0 -500px !important;
+    background: radial-gradient(skyblue 10%, whitesmoke);
+  }
+  #mainTitle {
+    margin: 0;
+    padding: 0;
+  }
+  #about {
+    height: auto !important;
+  }
+  #about #photo {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  #about #photo img {
+    width: 150px !important;
+    height: 170px !important;
+  }
+  #about #text {
+    width: 80% !important;
+    font-weight: 600;
+    gap: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+    height: 70%;
+    font-size: 15px;
+    padding: 30px 40px;
+  }
+  #about #text h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  #about #resume button {
+    margin-bottom: 60px;
+  }
+  #gallery {
+    letter-spacing: 3px;
+    scroll-margin-top: 80px;
+  }
+  #works {
+    width: 100%;
+    height: 250% !important;
+    padding-bottom: 50px !important;
+  }
+  #works #box {
+    width: 90%;
+    gap: 10px;
+    height: 1850px;
+  }
+  #works #box .card h4 {
+    width: 96%;
+    padding-right: 5px;
+  }
+  #contact {
+    height: auto;
+    margin-top: 0 !important;
+    padding-top: 10px;
+  }
+  #contact div img {
+    visibility: hidden;
+    margin: 0px -470px 0 0px !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 0px !important;
+    height: 0px !important;
+  }
+  #contact form {
+    margin-right: 170px;
+    margin-top: 20px;
+  }
+  #contact form div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #contact form div label {
+    margin-bottom: 3px;
+    font-size: 16px;
+  }
+  #contact form div input {
+    width: 300px;
+  }
+  #contact form div textarea {
+    width: 300px;
+    margin-left: 150px;
+    margin-top: -20px;
+  }
+  #contact form #send {
+    width: 300px !important;
+    margin: 20px 0px 40px 150px;
+  }
+  #social {
+    height: 50px;
+  }
+  #social img {
+    width: auto !important;
+    height: 80% !important;
+    -webkit-filter: drop-shadow(0px 0px 5px skyblue);
+            filter: drop-shadow(0px 0px 5px skyblue);
+  }
+}
+@media (max-width: 1200px) {
+  #main {
+    height: 80px;
+    background: radial-gradient(rgba(167, 225, 248, 0.692) 40%, rgb(156, 189, 239));
+    -webkit-box-shadow: 0 0 50px 10px rgb(156, 189, 239);
+            box-shadow: 0 0 50px 10px rgb(156, 189, 239);
+  }
+  #main #navBarBrand {
+    font-family: dybbuk;
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    font-size: 45px;
+  }
+  #main #lang img {
+    width: 80px;
+    height: 54px;
+  }
+  #main #TopBar {
+    margin-left: 420px !important;
+    direction: rtl;
+  }
+  #main #TopBar li {
+    font-size: 20px !important;
+    width: 80px;
+  }
+  #mainTitle {
+    letter-spacing: 3px;
+  }
+  #techno img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 20px;
+  }
+  #about {
+    padding-bottom: 0px;
+  }
+  #works {
+    height: 1600px;
+  }
+  #contact form input {
+    width: 250px;
+  }
+  #contact form textarea {
+    width: 250px;
+    margin: -15px 83px 0 0;
+  }
+  #contact form #send {
+    width: 250px;
+    margin: 20px 85px 35px 0px;
+  }
+}/*# sourceMappingURL=index-he.css.map */

@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*********************************************** Navigation Bar ************************************************/
+
+#mainNav {
+    width: 100%;
+    height: 70px;
+    border-top: 3px solid #1AE0EC;
+
+    #TopBar {
+        direction: rtl;
+        margin-left: 500px;
+
+        li {
+            font-size: 20px;
+            font-family: heebo;
+            font-weight: 600;
+            direction: rtl;
+
+            :hover {
+                border-radius: 20px;
+                color: #1AE0EC;
+            }
+        }
+    }
+
+    #photo {
+        padding-left: 10px !important;
+
+        img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+    }
+
+    #author {
+        margin-right: 740px !important;
+        font-size: 25px !important;
+        font-family: satisfy;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+}
+
+/*********************************************** Project Title *************************************************/
+
+#project-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 300px;
+    background-color: #92f8fc;
+    color: #3A3A3A;
+    font-family: heebo;
+
+    #title {
+        font-size: 60px;
+        font-weight: 900;
+    }
+
+    p {
+        width: 80%;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #buttons {
+
+        #go-to-project {
+            width: 120px;
+            height: 20px;
+            color: #2C2C2C;
+            background-color: #1AE0EC;
+            font-family: heebo;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            margin-left: 20px;
+
+            a {
+                text-decoration: none;
+
+                &:visited {
+                    color: #2C2C2C;
+                }
+            }
+
+        }
+
+        #download {
+            width: 120px;
+            height: 20px;
+            color: #2C2C2C;
+            background-color: #1AE0EC;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 30px;
+            border: none;
+        }
+    }
+}
+
+/*********************************************** Technologies **************************************************/
+
+#techno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+}
+
+#snapshot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 750px;
+    background-color: #EBFEFF;
+    box-shadow: 5px 5px 10px 5px rgb(183, 179, 179);
+
+    img {
+        width: 80%;
+        height: 50%;
+        margin-left: 30px;
+        box-shadow: 0px 0px 40px 0px #00000066;
+        object-fit: cover;
+    }
+}
+
+/************************************************** Credits ****************************************************/
+
+#rights {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    color: #1AE0EC;
+    font-family: heebo;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    padding-top: 10px;
+    border-bottom: 5px solid #1AE0EC;
+}
+
+/************************************************** Mobile ****************************************************/
+
+
+@media(max-width:480px) {
+    #mainNav {
+        width: 100%;
+        height: 60px;
+
+        #photo {
+            padding-left: 15px !important;
+            margin-top: -3px;
+
+            img {
+                width: 45px !important;
+                height: 45px !important;
+            }
+        }
+
+        #author {
+            width: 220px !important;
+            margin-right: 140px !important;
+            font-size: 17px !important;
+        }
+    }
+
+    #project-name {
+        #title {
+            font-size: 50px;
+        }
+    }
+
+
+    #techno {
+        width: auto;
+        height: 80px;
+        margin-left: 15px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+
+    #snapshot {
+        height: 360px;
+
+        img {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+    }
+
+
+    #rights {
+        font-size: 9px !important;
+        height: 18px;
+        padding-top: 2px;
+        border-bottom: 2px solid #1AE0EC;
+    }
+}
+
+@media(min-width:481px) and (max-width:768px) {
+    #mainNav {
+        height: 60px;
+
+        #photo {
+            padding-left: 10px;
+            margin-top: -3px;
+
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        #author {
+            width: 130px !important;
+            margin-right: 520px !important;
+            font-size: 20px !important;
+        }
+    }
+
+    #project-name {
+        #title {
+            font-size: 50px;
+        }
+    }
+
+
+    #techno {
+        height: 80px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+
+    #snapshot {
+        height: 360px !important;
+
+        img {
+            height: 60%;
+            margin-left: 20px;
+            margin-top: -10px;
+        }
+
+
+    }
+
+
+    #rights {
+        font-size: 11px !important;
+        height: 20px;
+        padding-top: 2px;
+        border-bottom: 4px solid #1AE0EC;
+    }
+}
+
+@media(min-width:769px) and (max-width:1024px) {
+    #mainNav {
+        height: 70px;
+        border-top: 3px solid #1AE0EC;
+
+        #photo {
+            padding-left: 50px;
+
+            img {
+                width: 55px;
+                height: 55px;
+            }
+        }
+    }
+
+    #snapshot {
+        height: 650px;
+
+        img {
+
+            margin-top: 10px;
+        }
+    }
+
+    #rights {
+        padding-top: 0;
+        height: 20px;
+        font-size: 13px;
+    }
+}

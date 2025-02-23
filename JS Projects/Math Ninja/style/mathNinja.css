@@ -1,0 +1,1199 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: henny penny;
+}
+
+body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#startPage {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    outline: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    letter-spacing: 0.1em;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+
+#startPage>h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#startPage>button {
+    margin-bottom: 4px;
+    box-shadow: 0 1px 2px 0 black;
+    width: 200px;
+    height: 48px;
+    font-size: 24px;
+    border: 4px double cyan;
+    border-radius: 1.5rem;
+    letter-spacing: 0.05em;
+    background-color: rgb(29, 172, 229);
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(40, 156, 213);
+    }
+}
+
+#transPage {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+#bg {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#bg>#bg-vid {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+    outline: none;
+    z-index: 0;
+    object-fit: fill;
+}
+
+#bg>#level2 {
+    min-width: 100%;
+    min-height: 100%;
+    width: 20%;
+    height: 160%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+    outline: none;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#bg>#level3 {
+    min-width: 100%;
+    min-height: 100%;
+    width: 110%;
+    height: 150%;
+    position: absolute;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+    outline: none;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#bg>#level2Intro> {
+    min-width: 100%;
+    min-height: 100%;
+    width: 180%;
+    height: 150%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 6;
+    outline: none;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#bg>#level3Intro> {
+    min-width: 100%;
+    min-height: 100%;
+    width: 170%;
+    height: 150%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 6;
+    outline: none;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#bg>#wellDone {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    object-fit: fill;
+    display: none;
+}
+
+#bg>#greatJob {
+    min-width: 100%;
+    min-height: 100%;
+    width: 20%;
+    height: 160%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    outline: none;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#bg>#endGame {
+    min-width: 100%;
+    min-height: 100%;
+    width: 110%;
+    height: 150%;
+    position: absolute;
+    left: 0x;
+    top: 0;
+    z-index: 6;
+    outline: none;
+    opacity: 0;
+    object-fit: fill;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    outline: none;
+    color: white;
+    z-index: 1;
+    opacity: 1;
+}
+
+#game>#bubble {
+    max-width: 105px;
+    max-height: 60px;
+    padding: 15px 20px 34px 24px;
+    color: black;
+    font-size: 13px;
+    border-radius: 400% 450% 450% 0;
+    transition: opacity 1s;
+    z-index: 15;
+    box-shadow: black;
+    background: white;
+    position: absolute;
+    left: 43%;
+    bottom: 70%;
+    letter-spacing: 2px;
+
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    white-space: pre-wrap;
+}
+
+#game>#blackboard {
+    width: 350px;
+    height: 80%;
+    margin-top: 24px;
+    margin-left: 600px;
+    transition: opacity 1s;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+
+#game>#blackboard>#innerBlackboard {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#game>#blackboard>#innerBlackboard>#title {
+    translate: (25%);
+    margin-top: 10px;
+    font-size: 30px;
+    width: 25%;
+    height: 32px;
+    letter-spacing: 4px;
+    background-color: rgb(41, 41, 41);
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+#game>#blackboard>#innerBlackboard>#operators {
+    width: 180px;
+    height: 30px;
+    margin-top: 70px;
+    margin-left: -75px;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    letter-spacing: 2px;
+    padding-bottom: -2px;
+    background-color: blue;
+    text-align: center;
+    color: white;
+
+    &:hover {
+        background-color: rgb(83, 83, 244);
+    }
+}
+
+#game>#blackboard>#innerBlackboard>#exercise {
+    width: 128px;
+    height: 24px;
+    font-size: 18px;
+    padding-top: 4px;
+    margin-top: 20px;
+    margin-right: 40px;
+    background-color: #eeeeee46;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 300px 40px rgb(229, 226, 226);
+
+}
+
+#game>#blackboard>#innerBlackboard>#equal {
+    height: 8px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-right: 160px;
+}
+
+
+#game>#blackboard>#innerBlackboard>#uInput {
+    width: 112px;
+    height: 24px;
+    font-size: 18px;
+    margin-top: -30px;
+    margin-left: 180px;
+    background-color: #eeeeee46;
+    text-align: center;
+    color: white;
+    border: 2px solid rgb(95, 95, 132);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 300px 40px rgb(229, 226, 226);
+}
+
+#game>#blackboard>#innerBlackboard>#send {
+    width: 160px;
+    height: 24px;
+    box-shadow: 0 4px 6px -1px black;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    letter-spacing: 0.1em;
+    background-color: green;
+    text-align: center;
+    color: white;
+
+    &:active {
+        transform: translate(2px, 2px);
+    }
+
+    &:hover {
+        background-color: rgb(16, 235, 16);
+    }
+}
+
+#game>#blackboard>#innerBlackboard>#history {
+    position: relative;
+    width: 330px;
+    height: 30%;
+    margin-top: 16px;
+    overflow-y: auto;
+    mix-blend-mode: lighten;
+
+}
+
+#game>#blackboard>#innerBlackboard>#history::-webkit-scrollbar {
+    display: none;
+}
+
+#game>#blackboard>#innerBlackboard>#history::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+}
+
+@keyframes scrollHint {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+#game>#blackboard>#innerBlackboard>#history>#content {
+    display: table;
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    background-color: transparent;
+    text-align: center;
+    animation: scrollHint 1.5s ease-in-out;
+    animation-delay: 5s;
+
+}
+
+#game>#blackboard>#innerBlackboard>#history>#content>thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 25%;
+    height: 10px;
+    padding: 0 16px 0 16px;
+    text-align: center;
+    z-index: 2;
+    background: linear-gradient(to bottom, #222222, #575757, transparent);
+}
+
+
+#game>#bbImg {
+    width: 350px;
+    height: 305px;
+    filter: blur(5px);
+    position: absolute;
+    left: 600px;
+    top: 16px;
+    z-index: 1;
+    mix-blend-mode: lighten;
+}
+
+#scoreBoard {
+    width: 170px;
+    height: auto;
+    border: 8px ridge rgb(120, 145, 234);
+    background-color: #e2f011;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#scoreBoard>h1 {
+    margin: 7px 0 7px 0;
+    font-size: 1.5rem;
+
+}
+
+#scoreBoard>#correct {
+    -webkit-text-stroke: .5px black;
+    width: 64px;
+    height: auto;
+    margin-left: -24px;
+    font-size: 1.5rem;
+    color: rgb(9, 201, 9);
+}
+
+#scoreBoard>#points {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    width: 56px;
+    height: 62px;
+    border: 1px solid black;
+    font-size: 1.875rem;
+    margin-top: 5px;
+    padding-top: 16px;
+    text-align: center;
+    color: black;
+}
+
+@keyframes pointUp {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#scoreBoard>.pointUp {
+    animation: pointUp 1s ease-in-out;
+}
+
+#scoreBoard>#incorrect {
+    -webkit-text-stroke: .5px black;
+    width: 64px;
+    margin-left: -36px;
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: rgb(255, 0, 0);
+}
+
+#scoreBoard>#negPoints {
+    width: 56px;
+    height: 62px;
+    font-size: 1.875rem;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    padding-top: 16px;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+}
+
+#bg>#blackScreen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: black;
+    z-index: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width:768px) {
+
+    #bg>#level2 {
+        min-width: 100%;
+        min-height: 100%;
+        width: 120%;
+        height: 160%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 0;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#level3 {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        transition: opacity 1s ease-in-out;
+        z-index: 0;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#level2Intro> {
+        min-width: 100%;
+        min-height: 100%;
+        width: 180%;
+        height: 150%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 6;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#wellDone {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        object-fit: fill;
+        display: none;
+    }
+
+    #bg>#greatJob {
+        min-width: 100%;
+        min-height: 100%;
+        width: 20%;
+        height: 160%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#endGame {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 6;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #game>#bubble {
+        max-width: 95px;
+        max-height: 50px;
+        padding: 15px 20px 34px 24px;
+        color: black;
+        font-size: 10px;
+        border-radius: 400% 450% 450% 0;
+        transition: opacity 1s;
+        z-index: 15;
+        box-shadow: black;
+        background: white;
+        position: absolute;
+        left: 43%;
+        bottom: 70%;
+        letter-spacing: 2px;
+
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        white-space: pre-wrap;
+    }
+
+    #game>#blackboard {
+        width: 250px;
+        height: 60%;
+        margin-top: 24px;
+        margin-left: 455px;
+        transition: opacity 1s;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+
+    #game>#blackboard>#innerBlackboard {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #game>#blackboard>#innerBlackboard>#title {
+        translate: (25%);
+        margin-top: 10px;
+        margin-right: 50px;
+        font-size: 25px;
+        width: 25%;
+        height: 32px;
+        letter-spacing: 4px;
+        background-color: rgb(41, 41, 41);
+        text-wrap: nowrap;
+        text-align: center;
+    }
+
+    #game>#blackboard>#innerBlackboard>#operators {
+        width: 140px;
+        height: 25px;
+        margin-top: 55px;
+        margin-bottom: 10px;
+        margin-left: -95px;
+        font-size: 12px;
+        border: 2px solid black;
+        border-radius: 1.5rem;
+        letter-spacing: 2px;
+        padding-top: 2px;
+        background-color: blue;
+        text-align: center;
+        color: white;
+
+        &:hover {
+            background-color: rgb(83, 83, 244);
+        }
+    }
+
+    #game>#blackboard>#innerBlackboard>#exercise {
+        width: 95px;
+        height: 20px;
+        font-size: 18px;
+        padding-top: 4px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 110px;
+        background-color: #eeeeee46;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 300px 40px rgb(229, 226, 226);
+
+    }
+
+    #game>#blackboard>#innerBlackboard>#equal {
+        height: 8px;
+        font-size: 1.5rem;
+        margin-top: -38px;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        margin-right: 20px;
+    }
+
+    #game>#blackboard>#innerBlackboard>#uInput {
+        width: 95px;
+        height: 22px;
+        font-size: 18px;
+        margin-top: -35px;
+        margin-left: 160px;
+        padding-top: 3px;
+        background-color: #eeeeee46;
+        text-align: center;
+        color: white;
+        border: 2px solid rgb(95, 95, 132);
+        border-radius: 1.5rem;
+        box-shadow: 0 0 300px 40px rgb(229, 226, 226);
+    }
+
+    #game>#blackboard>#innerBlackboard>#send {
+        width: 140px;
+        height: 20px;
+        font-size: 12px;
+        margin-left: 15px;
+        margin-top: 10px;
+        border: 1px solid black;
+        border-radius: 1.5rem;
+        letter-spacing: 0.1em;
+        background-color: green;
+        box-shadow: 0 4px 6px -1px black;
+        text-align: center;
+        color: white;
+
+        &:active {
+            transform: translate(2px, 2px);
+        }
+
+        &:hover {
+            background-color: rgb(16, 235, 16);
+        }
+    }
+
+    #game>#blackboard>#innerBlackboard>#history {
+        position: relative;
+        width: 300px;
+        height: 50%;
+        margin-top: 16px;
+        margin-left: 10px;
+        overflow-y: auto;
+        mix-blend-mode: lighten;
+
+    }
+
+    #game>#blackboard>#innerBlackboard>#history::-webkit-scrollbar {
+        display: none;
+    }
+
+
+
+    #game>#blackboard>#innerBlackboard>#history>#content {
+        display: table;
+        position: relative;
+        border-collapse: collapse;
+        width: 100%;
+        height: auto;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        background-color: transparent;
+        text-align: center;
+
+
+    }
+
+    #game>#blackboard>#innerBlackboard>#history>#content>thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        width: 25%;
+        height: 10px;
+        padding: 0 16px 0 16px;
+        text-align: center;
+        z-index: 2;
+        background: linear-gradient(to bottom, #222222, #575757, transparent);
+    }
+
+
+    #game>#bbImg {
+        width: 270px;
+        height: 80%;
+        filter: blur(5px);
+        position: absolute;
+        left: 450px;
+        top: 18px;
+        z-index: 1;
+        mix-blend-mode: lighten;
+    }
+
+    #scoreBoard {
+        width: 125px;
+        height: auto;
+        border: 8px ridge rgb(120, 145, 234);
+        background-color: #e2f011;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        letter-spacing: 0.1em;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    #scoreBoard>h1 {
+        font-size: 20px;
+
+    }
+
+    #scoreBoard>#correct {
+        -webkit-text-stroke: .5px black;
+        width: 64px;
+        height: auto;
+        margin-right: -15px;
+        margin-top: 5px;
+        margin-bottom: 7px;
+        font-size: 20px;
+        color: rgb(9, 201, 9);
+    }
+
+    #scoreBoard>#points {
+        width: 56px;
+        height: 62px;
+        border: 1px solid black;
+        font-size: 1.875rem;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding-top: 16px;
+        text-align: center;
+        color: black;
+    }
+
+    #scoreBoard>.pointUp {
+        animation: pointUp 1s ease-in-out;
+    }
+
+    #scoreBoard>#incorrect {
+        -webkit-text-stroke: .5px black;
+        width: 64px;
+        margin-left: -25px;
+        margin-top: 12px;
+        font-size: 20px;
+        color: rgb(255, 0, 0);
+    }
+
+    #scoreBoard>#negPoints {
+        width: 56px;
+        height: 62px;
+        font-size: 1.875rem;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        padding-top: 16px;
+        border: 1px solid black;
+        text-align: center;
+        color: black;
+    }
+}
+
+@media (max-width:480px) {
+
+    #bg>#level3 {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        transition: opacity 1s ease-in-out;
+        z-index: 0;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#level3Intro> {
+        min-width: 100%;
+        min-height: 100%;
+        width: 170%;
+        height: 150%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 6;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#wellDone {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        object-fit: fill;
+        display: none;
+    }
+
+    #bg>#greatJob {
+        min-width: 100%;
+        min-height: 100%;
+        width: 20%;
+        height: 160%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #bg>#endGame {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 150%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 6;
+        outline: none;
+        opacity: 0;
+        object-fit: fill;
+    }
+
+    #game>#bubble {
+        max-width: 95px;
+        max-height: 50px;
+        padding: 20px 0px 20px 7px;
+        color: black;
+        font-size: 8px;
+        border-radius: 400% 450% 450% 0;
+        transition: opacity 1s;
+        z-index: 15;
+        box-shadow: black;
+        background: white;
+        position: absolute;
+        left: 43%;
+        bottom: 73%;
+        letter-spacing: 1px;
+
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        white-space: pre-wrap;
+    }
+
+    #game>#blackboard {
+        width: 170px;
+        height: 80%;
+        margin-top: 24px;
+        margin-left: 275px;
+        transition: opacity 1s;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+
+    #game>#blackboard>#innerBlackboard {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #game>#blackboard>#innerBlackboard>#title {
+        translate: (25%);
+        margin-top: 10px;
+        margin-right: 15px;
+        font-size: 20px;
+        width: 25%;
+        height: 32px;
+        letter-spacing: 2px;
+        background-color: rgb(41, 41, 41);
+        text-wrap: nowrap;
+        text-align: center;
+    }
+
+    #game>#blackboard>#innerBlackboard>#operators {
+        width: 120px;
+        height: 20px;
+        margin-top: 45px;
+        margin-bottom: 10px;
+        margin-left: -50px;
+        font-size: 10px;
+        border: 2px solid black;
+        border-radius: 1.5rem;
+        letter-spacing: 2px;
+        padding-top: 0px;
+        background-color: blue;
+        text-align: center;
+        color: white;
+
+        &:hover {
+            background-color: rgb(83, 83, 244);
+        }
+    }
+
+    #game>#blackboard>#innerBlackboard>#exercise {
+        width: 60px;
+        height: 17px;
+        font-size: 15px;
+        padding-top: 4px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        margin-right: 80px;
+        background-color: #eeeeee46;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 300px 40px rgb(229, 226, 226);
+
+    }
+
+    #game>#blackboard>#innerBlackboard>#equal {
+        height: 8px;
+        font-size: 20px;
+        margin-top: -45px;
+        margin-bottom: 70px;
+        margin-left: 25px;
+        margin-right: 20px;
+    }
+
+    #game>#blackboard>#innerBlackboard>#uInput {
+        width: 50px;
+        height: 17px;
+        font-size: 15px;
+        margin-top: -78px;
+        margin-left: 90px;
+        padding-top: 3px;
+        background-color: #eeeeee46;
+        text-align: center;
+        color: white;
+        border: 2px solid rgb(95, 95, 132);
+        border-radius: 1.5rem;
+        box-shadow: 0 0 300px 40px rgb(229, 226, 226);
+    }
+
+    #game>#blackboard>#innerBlackboard>#send {
+        width: 130px;
+        height: 20px;
+        font-size: 10px;
+        margin-left: 10px;
+        margin-top: -40px;
+        padding-top: 1.5px;
+        border: 1px solid black;
+        border-radius: 1.5rem;
+        letter-spacing: 0.1em;
+        background-color: green;
+        box-shadow: 0 4px 6px -1px black;
+        text-align: center;
+        color: white;
+
+        &:active {
+            transform: translate(2px, 2px);
+        }
+
+        &:hover {
+            background-color: rgb(16, 235, 16);
+        }
+    }
+
+    #game>#blackboard>#innerBlackboard>#history {
+        position: relative;
+        width: 180px;
+        height: 40%;
+        margin-top: 0px;
+        margin-left: 7px;
+        overflow-y: auto;
+        mix-blend-mode: lighten;
+    }
+
+    #game>#blackboard>#innerBlackboard>#history::-webkit-scrollbar {
+        display: none;
+    }
+
+    #game>#blackboard>#innerBlackboard>#history>#content {
+        display: table;
+        position: relative;
+        border-collapse: collapse;
+        width: 100%;
+        height: auto;
+        font-size: 7px;
+        letter-spacing: 0.1em;
+        background-color: transparent;
+        text-align: center;
+
+
+    }
+
+    #game>#blackboard>#innerBlackboard>#history>#content>thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        width: 25%;
+        height: 10px;
+        padding: 0 16px 0 16px;
+        text-align: center;
+        z-index: 2;
+        font-size: 7px;
+        background: linear-gradient(to bottom, #222222, #575757, transparent);
+    }
+
+
+    #game>#bbImg {
+        width: 175px;
+        height: 80%;
+        filter: blur(5px);
+        position: absolute;
+        left: 275px;
+        top: 18px;
+        z-index: 1;
+        mix-blend-mode: lighten;
+    }
+
+    #scoreBoard {
+        width: 90px;
+        height: 96.5%;
+        border: 6px ridge rgb(120, 145, 234);
+        background-color: #e2f011;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        letter-spacing: 0.1em;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    #scoreBoard>h1 {
+        font-size: 13px;
+    }
+
+    #scoreBoard>#correct {
+        -webkit-text-stroke: .4px black;
+        width: 64px;
+        height: auto;
+        margin-right: -25px;
+        margin-top: 25px;
+        margin-bottom: 7px;
+        font-size: 17px;
+        color: rgb(9, 201, 9);
+    }
+
+    #scoreBoard>#points {
+        width: 46px;
+        height: 52px;
+        border: 1px solid black;
+        font-size: 25px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding-top: 13px;
+        text-align: center;
+        color: black;
+    }
+
+    #scoreBoard>.pointUp {
+        animation: pointUp 1s ease-in-out;
+    }
+
+    #scoreBoard>#incorrect {
+        -webkit-text-stroke: .5px black;
+        width: 64px;
+        margin-left: -10px;
+        margin-top: 20px;
+        font-size: 17px;
+        color: rgb(255, 0, 0);
+    }
+
+    #scoreBoard>#negPoints {
+        width: 46px;
+        height: 52px;
+        border: 1px solid black;
+        font-size: 25px;
+        margin-top: 5px;
+        margin-bottom: 30px;
+        padding-top: 13px;
+        text-align: center;
+        color: black;
+    }
+}

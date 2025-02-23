@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family: heebo;
+}
+
+/*********************************************** Main Section **************************************************/
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+
+    #whatsapp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50px;
+        left: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: #FDBD03;
+        border-radius: 50%;
+
+        img {
+            width: 35px;
+            height: 35px;
+        }
+
+
+    }
+
+    #top-stripe {
+        width: 330px;
+        height: 11.5px;
+        background-color: #FDBD03;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #bottom-stripe {
+        width: 660px;
+        height: 11.5px;
+        background-color: #FDBD03;
+        position: absolute;
+        top: 780px;
+        left: 0;
+    }
+
+    #contact-img {
+        width: auto;
+        height: auto;
+        margin: 180px 150px 0 0px;
+
+        img {
+            width: 355px;
+            height: 484px;
+
+        }
+
+    }
+
+    #text {
+        width: 300px;
+        height: 120px;
+        margin: 0 100px 100px 500px;
+        font-weight: 900;
+
+        h1 {
+            width: 300px;
+            height: 70px;
+            color: #FDBD03;
+            font-size: 43px;
+            font-weight: 900;
+        }
+
+        p {
+            width: 260px;
+            height: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            columns: #020253;
+            margin-bottom: 35px;
+
+        }
+    }
+
+    /************************************************** Contact ************************************************/
+
+    #contact {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+        margin: 350px -800px 50px 0px;
+
+
+        div {
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+
+            input {
+                width: 253px;
+                height: 30px;
+                border: none;
+                border-bottom: 3px solid #FDBD03;
+                background-color: #E5EEFF;
+                margin-left: 10px;
+                margin-bottom: 10px;
+            }
+
+            label {
+                font-size: 11px;
+                width: 80px;
+                margin-bottom: 2px;
+            }
+
+            textarea {
+                width: 515px;
+                height: 80px;
+                background-color: #E5EEFF;
+                border: none;
+                border-bottom: 3px solid #FDBD03;
+
+            }
+        }
+
+        #send {
+            font-weight: bold;
+            width: 100px;
+            height: 30px;
+            background-color: #FDBD03;
+            margin: 50px 0px 0px 200px;
+            border: none;
+        }
+    }
+
+    /************************************************** Social ************************************************/
+
+    #social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 370px;
+        height: 80px;
+        position: absolute;
+        top: 690px;
+        right: 870px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 63px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #FDBD03;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media(max-width:480px) {
+    #main {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        #whatsapp {
+            display: none;
+        }
+
+
+        #top-stripe {
+            width: 80% !important;
+            height: 1.5% !important;
+        }
+
+        #bottom-stripe {
+            width: 100% !important;
+            height: 1.5% !important;
+            top: 200% !important;
+        }
+
+        #contact-img {
+            width: 20% !important;
+            height: auto !important;
+            margin: 50px 0px 0px 80px !important;
+
+            img {
+                width: auto !important;
+                height: 200px !important;
+            }
+        }
+
+        #text {
+            width: 250px;
+            height: 110px !important;
+            margin: 0px 0px 0px 0px !important;
+
+            h1 {
+                text-align: center;
+                width: 200px;
+                height: 40px;
+                font-size: 33px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                text-align: center;
+                width: 250px;
+                font-size: 11px;
+            }
+        }
+
+        #contact {
+            flex-direction: column !important;
+            margin: 0px 0px 50px 0px !important;
+
+            div {
+                input {
+                    width: 300px !important;
+                    height: 30px !important;
+                }
+
+                label {
+                    font-size: 10px;
+                }
+
+                textarea {
+                    width: 300px !important;
+                    height: 70px;
+                    margin-left: 10px;
+                }
+            }
+
+            #send {
+                width: 300px;
+                margin: 20px 0px 0px 10px !important;
+                font-weight: 900;
+            }
+        }
+
+        #social {
+            width: 80% !important;
+            height: 8%;
+            top: 185% !important;
+            right: 6% !important;
+
+            div {
+                width: 50px !important;
+                height: 47px !important;
+
+                img {
+                    width: 40% !important;
+                    height: 40% !important;
+                }
+
+            }
+        }
+    }
+}
+
+@media(min-width:481px) and (max-width:768px) {
+    #main {
+        justify-content: flex-start;
+        width: auto;
+        height: auto;
+        position: relative;
+
+        #whatsapp {
+            top: 7%;
+            left: 4%;
+            width: 6% !important;
+            height: 8% !important;
+
+            img {
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+
+        #top-stripe {
+            width: 20%;
+            height: 8px;
+        }
+
+        #bottom-stripe {
+            width: 50%;
+            height: 2%;
+            top: 117%;
+        }
+
+        #contact-img {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 80% !important;
+            margin: 0px 30px 0px 80px !important;
+
+            img {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        #text {
+            width: 250px;
+            height: 200px !important;
+            margin: 30px -30px 80px 500px !important;
+
+            h1 {
+                width: 200px;
+                height: 40px;
+                font-size: 37px;
+                margin-right: -45px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                width: 250px;
+                font-size: 12px !important;
+                margin-right: -45px !important;
+            }
+        }
+
+        #contact {
+            margin: 250px -750px 50px 0px !important;
+
+            div {
+
+                input {
+                    width: 200px !important;
+                    height: 22px;
+                }
+
+                label {
+                    font-size: 10px;
+                }
+
+                textarea {
+                    width: 410px !important;
+                    height: 70px;
+                }
+            }
+
+            #send {
+                margin: 20px 0px 0px 200px;
+                font-weight: 900;
+            }
+        }
+
+        #social {
+            width: 37% !important;
+            height: 8% !important;
+            top: 105% !important;
+            right: 60% !important;
+
+            div {
+                width: 50%;
+                height: 120%;
+
+            }
+        }
+    }
+}
+
+@media(min-width:769px) and (max-width:1024px) {
+    #main {
+        justify-content: flex-start;
+        width: auto;
+        height: auto;
+        position: relative;
+
+        #whatsapp {
+            top: 7%;
+            left: 4%;
+            width: 5%;
+            height: 9%;
+
+            img {
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+
+        #top-stripe {
+            width: 30%;
+            height: 2%;
+        }
+
+        #bottom-stripe {
+            width: 50%;
+            height: 2%;
+            top: 130%;
+        }
+
+        #contact-img {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 60%;
+            margin: 100px 60px 0px 50px;
+
+            img {
+                width: 90%;
+                height: auto;
+            }
+        }
+
+        #text {
+            width: 250px;
+            height: 200px;
+            margin: 50px 0px 70px 450px;
+
+            h1 {
+                width: 250px;
+                height: 40px;
+                font-size: 43px;
+                margin-left: 110px;
+                margin-bottom: 30px;
+            }
+
+            p {
+                width: 250px;
+                font-size: 13px;
+                margin: 15px 0px 0px 150px;
+            }
+        }
+
+        #contact {
+            margin: 250px -700px 0px 0px;
+
+
+            div {
+
+                input {
+                    width: 263px;
+                    height: 32px;
+                }
+
+                label {
+                    font-size: 11px;
+                }
+
+                textarea {
+                    width: 536px;
+                    height: 80px;
+                }
+            }
+
+            #send {
+                margin: 20px 0px 0px 200px;
+                font-weight: 900;
+            }
+        }
+
+        #social {
+            width: 27%;
+            height: 8%;
+            top: 113%;
+            right: 70%;
+
+            div {
+                width: 30%;
+                height: 120%;
+
+                img {
+                    width: 50% !important;
+                    height: 50% !important;
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,235 @@
+* {
+    font-family: heebo;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end;
+
+    #bg-img {
+        width: 100%;
+        height: 65%;
+        background-image: url(../images/bg.png);
+        background-position: center;
+        position: absolute;
+        z-index: 0;
+    }
+
+    #contact {
+        background-color: #1A1A1AD4;
+        width: 360px;
+        height: 400px;
+        color: white;
+        direction: rtl;
+        margin: 70px 120px 0 0;
+        position: relative;
+        z-index: 1;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            legend {
+                width: 290px;
+                text-align: center;
+                font-size: 23px;
+                font-weight: 900;
+                margin: 55px 30px 20px 0;
+            }
+
+            p {
+                width: 280px;
+                text-align: center;
+                font-size: 13px;
+                margin-bottom: 30px;
+                margin-right: 35px;
+            }
+
+            label {
+                margin-right: 40px;
+                font-size: 10px;
+            }
+
+            input {
+                width: 270px;
+                height: 30px;
+                margin-bottom: 15px;
+                margin-right: 40px;
+            }
+
+            button {
+                background-color: #D31C75;
+                width: 110px;
+                height: 35px;
+                color: white;
+                margin-right: 40px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    #main {
+        height: 350px;
+
+        #contact {
+            width: 290px;
+            height: 300px;
+            margin: 50px 95px 0 0;
+
+            form {
+                legend {
+                    text-align: center;
+                    width: 250px;
+                    font-size: 20px;
+                    margin: 25px 20px 10px 0;
+                }
+
+                p {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    margin-right: 40px;
+                    font-size: 10px;
+                    width: 200px;
+                }
+
+                label {
+                    margin-right: 35px;
+                    font-size: 8px;
+                }
+
+                input {
+                    width: 210px;
+                    height: 20px;
+                    margin-right: 35px;
+                }
+
+                button {
+                    width: 210px;
+                    height: 23px;
+                    margin-right: 35px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:481px) and (max-width:768px) {
+    #main {
+        height: 350px;
+
+        #contact {
+            width: 250px;
+            height: 280px;
+            margin: 70px 60px 0 0;
+
+            form {
+                legend {
+                    width: 180px;
+                    font-size: 15px;
+                    margin: 30px 30px 10px 0;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    width: 200px;
+                    font-size: 10px;
+                    margin-right: 25px;
+                }
+
+                label {
+                    margin-right: 20px;
+                    font-size: 8px;
+                }
+
+                input {
+                    width: 210px;
+                    height: 20px;
+                    margin-right: 20px;
+                }
+
+                button {
+                    width: 210px;
+                    height: 23px;
+                    margin-right: 20px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width:769px) and (max-width:1024px) {
+    #main {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: flex-end;
+
+        #bg-img {
+            width: 100%;
+            height: 65%;
+            background-image: url(../images/bg.png);
+            background-position: center;
+            position: absolute;
+            z-index: 0;
+        }
+
+        #contact {
+            background-color: #1A1A1AD4;
+            width: 260px;
+            height: 300px;
+            color: white;
+            direction: rtl;
+            margin: 50px 120px 0 0;
+            position: relative;
+            z-index: 1;
+
+            form {
+
+                legend {
+                    width: 240px;
+                    text-align: center;
+                    font-size: 18px;
+                    margin: 35px 5px 10px 0;
+                }
+
+                p {
+                    width: 250px;
+                    text-align: center;
+                    font-size: 10px;
+                    margin-bottom: 30px;
+                    margin-right: 0px;
+                }
+
+                label {
+                    margin-right: 25px;
+                    font-size: 9px;
+                }
+
+                input {
+                    width: 200px;
+                    height: 23px;
+                    margin-bottom: 15px;
+                    margin-right: 25px;
+                }
+
+                button {
+                    background-color: #D31C75;
+                    width: 200px;
+                    height: 30px;
+                    color: white;
+                    margin-right: 25px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

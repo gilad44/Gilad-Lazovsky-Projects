@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Henny+Penny:regular" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./style/mathNinja.css">
+
+    <title>Math Ninja</title>
+</head>
+
+<body>
+    <audio id="bg-music" src="./audio/ninja-15265.mp3"></audio>
+
+    <div id="startPage">
+        <h1>Choose Your
+            Level</h1>
+
+        <button type="button" id="easy">Easy</button>
+
+        <button type="button" id="medium">Medium</button>
+        </button>
+
+        <button type="button" id="hard">Hard</button>
+    </div>
+
+    <div id="transPage">
+    </div>
+    <div id="bg">
+        <video id="bg-vid" src="./Vids/level1Teacher.mp4"></video>
+        <video id="level2" src="./Vids/level 2.mp4"></video>
+        <video id="level3" src="./Vids/level 3.mp4"></video>
+        <video id="level2Intro" src="./Vids/type in.mp4"></video>
+        <video id="level3Intro" src="./Vids/fill in.mp4"></video>
+        <video id="wellDone" src="./Vids/Well Done.mp4"></video>
+        <video id="greatJob" src="./Vids/great job.mp4"></video>
+        <video id="endGame" src="./Vids/congrats.mp4"></video>
+        <div id="blackScreen"></div>
+    </div>
+
+    <div id="game">
+        <div id="bubble">
+        </div>
+        <div id="blackboard">
+            <div id="innerBlackboard">
+                <h1 id="title">
+                    Math Ninja
+                </h1>
+                <select id="operators">
+                    <option value=" none" selected disabled>Select operator</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <div id="exercise">
+                </div>
+                <div id="equal">=</div>
+                <input id="uInput" type="text" inputmode="numeric" pattern="[0-9]*" min="0"
+                    onkeydown="return event.keyCode !== 69 && event.keyCode !== 189 && event.keyCode !== 187 && event.keyCode !== 190">
+                <button id="send" type=" submit">Submit answer</button>
+                <div id="history">
+                    <table id="content" cellspacing="0px">
+                        <thead>
+                            <th>
+                                Exercise
+                            </th>
+                            <th>
+                                Right
+                                Solution</th>
+                            <th>
+                                Your
+                                Solution</th>
+                            <th>
+                                Points Gained</th>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <img id="bbImg" src="./images/blackboard.jpg" alt="blackboard">
+    </div>
+    <div id="scoreBoard">
+        <h1>Score Board</h1>
+        <div id="correct">
+            Correct
+        </div>
+        <div id="points" class="pointUp">
+        </div>
+        <div id="incorrect">
+            Incorrect
+        </div>
+        <div id="negPoints" class="pointUp">
+        </div>
+    </div>
+    <audio id="champ" src="./audio/Queen  Champions _1.mp3"></audio>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

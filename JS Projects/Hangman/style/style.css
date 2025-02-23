@@ -1,0 +1,946 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/pexels-bariali07-6462921.jpg) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 370px;
+    margin-top: -20px;
+    font-family: 'MedievalSharp', sans-serif;
+
+}
+
+#gallows {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 70%;
+    height: 60%;
+    margin-left: 13%;
+    margin-top: -25%;
+}
+
+#gallows svg {
+    width: 100%;
+    height: auto;
+}
+
+#form-area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+
+}
+
+#wordParchment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 120px;
+    background: url(../images/Scroll-PNG-Clipart.png) no-repeat center center/contain;
+    position: absolute;
+    top: 35%;
+    left: 27%;
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+#wordParchment.word-container-easy {
+    width: 150px;
+    height: 120px;
+    top: 35%;
+    left: 27%;
+    font-size: 20px;
+}
+
+#wordParchment.word-container-medium {
+    width: 190px;
+    height: 170px;
+    top: 29%;
+    left: 27%;
+}
+
+#wordParchment.word-container-hard {
+    width: 220px;
+    height: 190px;
+    top: 25%;
+    left: 27%;
+}
+
+
+#wordParchment>#chosen-word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+span {
+    color: rgb(167, 0, 0);
+    animation: flicker 1s infinite alternate;
+
+}
+
+@keyframes flicker {
+    0% {
+        text-shadow: 0 0 5px #ff9900, 0 0 10px orangered;
+    }
+
+    50% {
+        text-shadow: 0 0 10px #ff5500, 0 0 15px #cc2200;
+    }
+
+    100% {
+        text-shadow: 0 0 15px #ff9900, 0 0 10px orangered;
+    }
+}
+
+#form-area>form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 30px;
+}
+
+#form-area>form>#submit {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background: url(../images/pexels-eva-bronzini-6952648.jpg) no-repeat center center/cover;
+    animation: flicker 1s infinite alternate;
+    border: 1px solid #000000;
+    border-radius: 0px 25px;
+    margin-top: -200px;
+    margin-bottom: 5px;
+    box-shadow: inset 0 0 10px #000000;
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+#form-area>form>#word-input {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    margin-bottom: -160px;
+    background-color: rgb(205, 177, 101);
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+#form-area>#buttons>#keyboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 150px;
+    gap: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+#form-area>#buttons>#keyboard-container>#keyboard-top {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    height: 150px;
+    gap: 10px;
+    padding: 5px;
+    z-index: 1;
+    border-radius: 10px;
+    margin-bottom: 0;
+
+}
+
+#form-area>#buttons>#keyboard-container>#keyboard-bottom {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    height: 150px;
+    gap: 5px;
+    padding: 5px;
+    z-index: 1;
+    border-radius: 10px;
+    margin-bottom: 0;
+    margin-top: -10px;
+    margin-left: 200px;
+
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    background: url(../images/Scroll-PNG-Clipart.png) no-repeat center center/contain;
+    color: rgb(0, 0, 0);
+    border-radius: 35px 5px 40px 5px;
+    cursor: pointer;
+    animation: flicker 1s infinite alternate;
+    clip-path: polygon(50% 5%, 100% 30%, 85% 100%, 15% 100%, 0% 30%);
+    box-shadow: inset 0 0 10px #000000;
+    font-family: 'MedievalSharp', sans-serif;
+
+    &:hover {
+        background-color: #e1e1e1;
+        color: rgb(215, 247, 34);
+    }
+}
+
+#form-area>#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    gap: 10px;
+
+}
+
+#form-area>#buttons>#start,
+#reset {
+    width: 80px;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+    background: url(../images/pexels-chiecharon-2463338.jpg) no-repeat center center/cover;
+    animation: flicker 1s infinite alternate;
+    border-radius: 0px 55px;
+    box-shadow: inset 0 0 10px #000000;
+    font-family: 'MedievalSharp', sans-serif;
+
+    &:hover {
+        background-color: #e1e1e1;
+        color: rgb(215, 247, 34);
+        -webkit-text-stroke: .5px black;
+    }
+}
+
+#levelParchment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 190px;
+    background: url(../images/Scroll-PNG-Clipart.png) no-repeat center center/contain;
+    position: absolute;
+    top: 22%;
+    left: 60%;
+    transform: perspective(500px) rotateX(10deg) scaleY(1.5);
+}
+
+#levelParchment>#level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-left: -78px;
+    position: absolute;
+    top: 20%;
+    left: 65%;
+}
+
+#levelParchment>#level>#level-select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    gap: 10px;
+    margin-left: -25px;
+    text-align: center;
+    animation: flicker 1s infinite alternate;
+    border: 1px solid #000000;
+    border-radius: 0px 25px;
+    box-shadow: inset 0 0 10px #000000;
+    font-family: 'MedievalSharp', sans-serif;
+}
+
+#levelParchment>#level>#level-select>option {
+    background-color: #d4b675;
+    color: #000;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#levelParchment>#level>#level-select option:hover {
+    background-color: #c4a665;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: 220px 20px;
+    }
+
+    25% {
+        transform: rotate(15deg);
+        transform-origin: 220px 20px;
+    }
+
+    75% {
+        transform: rotate(-15deg);
+        transform-origin: 220px 20px;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 220px 20px;
+    }
+}
+
+.full-body.game-over {
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: swing 2s ease-in-out infinite;
+}
+
+#game-over {
+    position: absolute;
+    left: 30.3%;
+    font-size: 80px;
+    color: red;
+    text-shadow: 10px 10px 20px rgba(255, 140, 0);
+    -webkit-text-stroke: rgba(2, 2, 1, 0.626) .1px;
+    opacity: 1;
+    transform: scale(0);
+    z-index: 4;
+    visibility: visible;
+}
+
+#flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 6;
+}
+
+#winText {
+    position: absolute;
+    top: 45%;
+    font-family: 'Caesar Dressing';
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 10px 10px 20px rgba(255, 140, 0);
+    -webkit-text-stroke: rgba(255, 255, 0, 0.552) 1px;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 4;
+    visibility: hidden;
+}
+
+#winText span {
+    display: inline-block;
+    transform: translateY(-100px);
+    opacity: 0;
+    z-index: 4;
+    margin: 0 2px;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #game-container {
+        width: 450px;
+        height: 180px;
+        z-index: 1;
+        margin-top: 0;
+    }
+
+    #gallows {
+        width: 70%;
+        height: 60%;
+        margin-left: 1%;
+        margin-top: 16%;
+        transform: scale(0.8, 0.8);
+        z-index: 2;
+    }
+
+    #form-area {
+        margin-top: 20px;
+    }
+
+    #form-area>form {
+        width: 40%;
+        height: 40%;
+        margin-bottom: 50px;
+    }
+
+    #form-area>form>#submit {
+        width: 100%;
+        height: 100%;
+        font-size: 15px;
+        margin-top: 15px;
+        padding-top: 2px;
+        box-shadow: inset 0 0 7px #000000;
+
+    }
+
+    #form-area>form>#word-input {
+        width: 100%;
+        height: 50%;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: -20px;
+        padding-top: 2px;
+        background-color: rgb(205, 177, 101);
+    }
+
+    #form-area>#buttons>#keyboard-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 30px;
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    #form-area>#buttons>#keyboard-container>#keyboard-top {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        height: 80px;
+        gap: 0px;
+        padding: 0px;
+        border-radius: 10px;
+        margin-bottom: 0;
+    }
+
+    #form-area>#buttons>#keyboard-container>#keyboard-bottom {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        height: 50%;
+        gap: 0px;
+        padding: 0px;
+        z-index: 1;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 0px;
+        margin-left: 60px;
+
+    }
+
+    .key {
+        width: 80%;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    #form-area>#buttons {
+        width: 95%;
+        height: 50px;
+        margin-bottom: -40px;
+        gap: 8px;
+        margin-left: 5px;
+
+    }
+
+    #form-area>#buttons>#start,
+    #reset {
+        width: 50px;
+        height: 100px;
+        font-size: 17px;
+        margin-bottom: 30px;
+
+        &:hover {
+            background-color: #e1e1e1;
+            color: rgb(215, 247, 34);
+            -webkit-text-stroke: .5px black;
+        }
+    }
+
+    #levelParchment {
+        width: 120px;
+        height: 125px;
+        top: 25%;
+        left: 60%;
+        scale: 0.8;
+        z-index: 3;
+    }
+
+    #levelParchment>#level>#level-select {
+        width: 85px;
+        height: 15px;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        font-size: 10px;
+        box-shadow: inset 0 0 7px #000000;
+    }
+
+    #levelParchment>#level>#level-select>option {
+        background-color: #d4b675;
+        color: #000;
+        padding: 0px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #levelParchment>#level>#level-select option:hover {
+        background-color: #c4a665;
+    }
+
+    #wordParchment {
+        width: 100px;
+        height: 80px;
+        font-size: 15px;
+        top: 35%;
+        left: 15%;
+
+    }
+
+    #wordParchment.word-container-easy {
+        width: 100px;
+        height: 80px;
+        top: 35%;
+        left: 15%;
+        font-size: 15px;
+    }
+
+    #wordParchment.word-container-medium {
+        width: 125px;
+        height: 95px;
+        top: 32%;
+        left: 13%;
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    #wordParchment.word-container-hard {
+        width: 140px;
+        height: 120px;
+        top: 27%;
+        left: 8%;
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    #wordParchment>#chosen-word {
+        width: 80%;
+        height: 100%;
+
+    }
+
+    #game-over {
+        font-size: 70px;
+        left: 12%;
+    }
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    body {
+        width: 100%;
+        height: 320px;
+    }
+
+    #game-container {
+        width: 450px;
+        height: 220px;
+    }
+
+    #gallows {
+        width: 70%;
+        height: 60%;
+        margin-left: 4%;
+        margin-top: 0%;
+    }
+
+    #form-area>form {
+        width: 40%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #form-area>form>#submit {
+        width: 100%;
+        height: 50%;
+        font-size: 18px;
+        margin-top: 15px;
+
+    }
+
+    #form-area>form>#word-input {
+        width: 100%;
+        height: 65%;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: -20px;
+        background-color: rgb(205, 177, 101);
+    }
+
+    #form-area>#buttons>#keyboard-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 40px;
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    #form-area>#buttons>#keyboard-container>#keyboard-top {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        height: 80px;
+        gap: 0px;
+        padding: 0px;
+        border-radius: 10px;
+        margin-bottom: 0;
+    }
+
+    #form-area>#buttons>#keyboard-container>#keyboard-bottom {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        height: 50%;
+        gap: 0px;
+        padding: 0px;
+        z-index: 1;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 0px;
+        margin-left: 100px;
+
+    }
+
+    .key {
+        width: 80%;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    #form-area>#buttons {
+        width: 100%;
+        height: 60px;
+        margin-bottom: -40px;
+        gap: 10px;
+
+    }
+
+    #form-area>#buttons>#start,
+    #reset {
+        width: 60px;
+        height: 110px;
+        font-size: 23px;
+        margin-bottom: 30px;
+
+
+
+        &:hover {
+            background-color: #e1e1e1;
+            color: rgb(215, 247, 34);
+            -webkit-text-stroke: .5px black;
+        }
+    }
+
+    #levelParchment {
+        width: 140px;
+        height: 145px;
+        top: 20%;
+        left: 56%;
+        scale: 0.8;
+    }
+
+    #levelParchment>#level>#level-select {
+        width: 100px;
+        height: 15px;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        font-size: 12px;
+        box-shadow: inset 0 0 7px #000000;
+    }
+
+    #levelParchment>#level>#level-select>option {
+        background-color: #d4b675;
+        color: #000;
+        padding: 0px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #levelParchment>#level>#level-select option:hover {
+        background-color: #c4a665;
+    }
+
+    #wordParchment {
+        width: 100px;
+        height: 80px;
+        font-size: 15px;
+        top: 36%;
+        left: 27%;
+    }
+
+    #wordParchment.word-container-easy {
+        width: 100px;
+        height: 80px;
+        top: 36%;
+        left: 27%;
+        font-size: 15px;
+    }
+
+    #wordParchment.word-container-medium {
+        width: 135px;
+        height: 105px;
+        top: 29%;
+        left: 22%;
+        font-size: 17px;
+        padding-bottom: 20px;
+    }
+
+    #wordParchment.word-container-hard {
+        width: 150px;
+        height: 130px;
+        top: 24%;
+        left: 16%;
+        font-size: 17px;
+        padding-bottom: 30px;
+    }
+
+    #wordParchment>#chosen-word {
+        width: 80%;
+        height: 100%;
+
+    }
+
+    #game-over {
+        left: 23%;
+    }
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+    body {
+        width: 100%;
+        height: 320px;
+    }
+
+    #game-container {
+        width: 450px;
+        height: 220px;
+    }
+
+    #gallows {
+        width: 70%;
+        height: 60%;
+        margin-left: 8%;
+        margin-top: 0%;
+    }
+
+    #form-area {
+        margin-right: 25px;
+    }
+
+    #form-area>form {
+        width: 40%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    #form-area>form>#submit {
+        width: 100%;
+        height: 50%;
+        font-size: 18px;
+        margin-top: 15px;
+
+    }
+
+    #form-area>form>#word-input {
+        width: 100%;
+        height: 65%;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: -20px;
+        background-color: rgb(205, 177, 101);
+    }
+
+    #form-area>#buttons>#keyboard-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 40px;
+        gap: 0px;
+        margin-bottom: 0px;
+    }
+
+    #form-area>#buttons>#keyboard-container>#keyboard-top {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        height: 80px;
+        gap: 0px;
+        padding: 0px;
+        border-radius: 10px;
+        margin-bottom: 0;
+    }
+
+    #form-area>#buttons>#keyboard-container>#keyboard-bottom {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        width: 100%;
+        height: 50%;
+        gap: 0px;
+        padding: 0px;
+        z-index: 1;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 0px;
+        margin-left: 100px;
+
+    }
+
+    .key {
+        width: 80%;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    #form-area>#buttons {
+        width: 100%;
+        height: 60px;
+        margin-bottom: -40px;
+        gap: 10px;
+
+    }
+
+    #form-area>#buttons>#start,
+    #reset {
+        width: 60px;
+        height: 110px;
+        font-size: 23px;
+        margin-bottom: 30px;
+
+
+
+        &:hover {
+            background-color: #e1e1e1;
+            color: rgb(215, 247, 34);
+            -webkit-text-stroke: .5px black;
+        }
+    }
+
+    #levelParchment {
+        width: 160px;
+        height: 165px;
+        top: 15%;
+        left: 56%;
+        scale: 0.8;
+    }
+
+    #levelParchment>#level>#level-select {
+        width: 100px;
+        height: 15px;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        font-size: 12px;
+        box-shadow: inset 0 0 7px #000000;
+    }
+
+    #levelParchment>#level>#level-select>option {
+        background-color: #d4b675;
+        color: #000;
+        padding: 0px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    #levelParchment>#level>#level-select option:hover {
+        background-color: #c4a665;
+    }
+
+    #levelParchment>#level>#level-select {
+        width: 120px;
+        height: 15px;
+        margin-bottom: 20px;
+        margin-left: -20px;
+        font-size: 12px;
+        box-shadow: inset 0 0 7px #000000;
+    }
+
+    #wordParchment {
+        width: 120px;
+        height: 100px;
+        font-size: 15px;
+        top: 36%;
+        left: 27%;
+        top: 32%;
+    }
+
+    #wordParchment.word-container-easy {
+        width: 120px;
+        height: 100px;
+        top: 32%;
+        left: 27%;
+        font-size: 15px;
+    }
+
+    #wordParchment.word-container-medium {
+        width: 140px;
+        height: 110px;
+        top: 28%;
+        left: 22%;
+        font-size: 17px;
+        padding-bottom: 20px;
+    }
+
+    #wordParchment.word-container-hard {
+        width: 170px;
+        height: 150px;
+        top: 19%;
+        left: 20%;
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+
+    #wordParchment>#chosen-word {
+        width: 80%;
+        height: 100%;
+    }
+
+    #game-over {
+        left: 29%;
+    }
+
+}

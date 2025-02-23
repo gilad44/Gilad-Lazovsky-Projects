@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: gluten;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+
+
+#title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background: linear-gradient(to right, indigo, blue, orange, green, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    h1 {
+        font-size: 45px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+    }
+
+    p {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: auto;
+    background-image: url(../images/house.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+    margin: 3% 0 5% 15%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.694);
+
+
+    #content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 390px;
+        margin-top: 40px;
+
+
+        #photo {
+            display: flex;
+            justify-content: flex-end;
+            height: 200px;
+            margin-top: 160px;
+            margin-right: 15px;
+
+            img {
+                width: 480px;
+                height: 230px;
+            }
+        }
+
+
+        /************************************************ Contact ******************************************************/
+        #contact {
+            display: flex;
+            align-items: flex-start;
+            width: 230px;
+            height: 300px;
+            background: linear-gradient(white, #e4b4b4 10%, #f18d00 90%);
+            border: 8px solid #ab810e;
+            border-radius: 30px;
+            padding-top: 20px;
+            font-size: 14px;
+            margin-left: 30px;
+
+            legend {
+                width: 100%;
+                height: 50px;
+                font-size: 20px;
+                margin-top: 10px;
+                text-align: center;
+                background: linear-gradient(to left, violet, blue, indigo, red, green, orange);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            label {
+                display: inline-block;
+                width: 55px;
+                margin-left: 5px;
+            }
+
+            input {
+                border-radius: 20px;
+                width: 150px;
+                height: 20px;
+                margin-bottom: 8px;
+            }
+
+            #send {
+                width: 170px;
+                height: 30px;
+                margin: 10px 20px 0 35px;
+                border: 3px groove #8a3903;
+                border-radius: 50px;
+                font-size: 15px;
+
+                :hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+/*************************************************** Credits ***************************************************/
+#rights {
+    p {
+        position: fixed;
+        bottom: 0;
+        text-align: left !important;
+        width: 100%;
+        height: 15px;
+        background-color: black;
+        color: white;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+}
+
+/*************************************************** Mobile ***************************************************/
+
+@media(max-width:480px) {
+
+    #title {
+        margin-bottom: 20px;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    #main {
+        width: 100% !important;
+        margin-left: 0px !important;
+        margin-top: 200px !important;
+        padding-bottom: 0px !important;
+        border-radius: 30px;
+
+        #content {
+            flex-direction: column;
+
+            #photo {
+                margin-top: -600px !important;
+                margin-bottom: -120px !important;
+                margin-left: 60px !important;
+                z-index: 4;
+
+                img {
+                    width: 340px;
+                    height: 160px;
+                }
+            }
+
+
+            /************************************************ Contact ******************************************************/
+            #contact {
+
+                width: 250px !important;
+                height: 380px;
+                font-size: 12px;
+                margin-left: 100px !important;
+                margin-bottom: -330px;
+                margin-top: 50px;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    legend {
+                        font-size: 17px !important;
+                        margin-left: 20px;
+                        margin-bottom: -10px;
+
+                    }
+
+                    label {
+                        width: 150px;
+                        margin-right: 30px;
+                        margin-bottom: 3px;
+                        font-size: 15px;
+                    }
+
+                    input {
+                        height: 25px;
+                        width: 200px !important;
+                        margin-bottom: 8px;
+                        margin-left: 25px;
+                    }
+
+                    #send {
+                        height: 30px !important;
+                        margin: 10px 0px 0 20px !important;
+                        font-size: 14px;
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    #rights {
+
+        p {
+            text-align: center !important;
+            height: 8px !important;
+            font-size: 12px;
+            padding-bottom: 3px !important;
+        }
+    }
+}
+
+@media(min-width:481px) and (max-width:769px) {
+    #title {
+        margin-bottom: 20px;
+    }
+
+    #main {
+        width: 80% !important;
+        margin-left: 80px !important;
+        margin-top: 200px !important;
+
+        #content {
+            flex-direction: column;
+
+            #photo {
+                margin-top: -600px !important;
+                margin-left: 80px !important;
+
+                img {
+                    width: 450px;
+                    height: 200px;
+
+                }
+            }
+
+
+            /************************************************ Contact ******************************************************/
+            #contact {
+                width: 330px !important;
+                height: 270px;
+                font-size: 12px;
+                margin-left: 130px !important;
+                margin-bottom: -330px;
+                margin-top: 50px;
+
+                legend {
+                    font-size: 22px !important;
+                }
+
+                input {
+                    width: 200px !important;
+                    margin-bottom: 8px;
+                    margin-left: 10px;
+                }
+
+                #send {
+                    height: 23px !important;
+                    margin: 18px 0px 0 90px !important;
+                    font-size: 14px;
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+
+    #rights {
+
+        p {
+            height: 8px !important;
+            font-size: 12px;
+            padding-bottom: 3px !important;
+        }
+    }
+}
+
+@media(min-width:769px) and (max-width:1024px) {
+    #main {
+
+
+        #photo {
+            margin-top: 190px;
+
+            img {
+                width: 450px;
+                height: 200px;
+            }
+
+
+
+            /************************************************ Contact ******************************************************/
+            #contact {
+                height: 270px;
+                font-size: 12px;
+
+                legend {
+                    font-size: 18px;
+                }
+
+                input {
+                    width: 130px;
+                    height: 15px;
+                    margin-left: 10px;
+                }
+
+                #send {
+                    height: 20px;
+                    margin: 18px 20px 0 35px;
+                    font-size: 14px;
+                    padding-top: 2px;
+                }
+            }
+        }
+    }
+
+    #rights {
+        p {
+            height: 5px;
+            font-size: 12px;
+            padding-top: 0px;
+            padding-bottom: 5px;
+        }
+    }
+}

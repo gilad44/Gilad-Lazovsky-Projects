@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 90%;
+    padding: 2.5rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-control input {
+    width: 50%;
+    height: 30px;
+    padding: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    width: 65%;
+}
+
+.form-control button {
+    padding: 5px 10px;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-control button:hover {
+    background: linear-gradient(45deg, #FF8E53, #FF6B6B);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+}
+
+.container>.weatherInfo {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    padding: 1rem;
+}
+
+#city {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+.container>.weatherInfo>#temp {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    animation: scaleIn 0.5s ease;
+}
+
+.container>.weatherInfo>#weatherIcon {
+    width: 100px;
+    height: 100px;
+    margin: 1rem 0;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    animation: bounce 2s infinite;
+    margin-top: -10px;
+}
+
+.container>.weatherInfo>#description {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-top: -10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+#errorMessage {
+    color: #FF6B6B;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: shake 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 50%;
+        height: 90%;
+        padding: 1.5rem;
+    }
+
+    .form-control {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+
+    .form-control label {
+        margin: -20px 0 40px 60px;
+        font-size: 20px;
+    }
+
+    .form-control input {
+        width: 70%;
+        height: 30px;
+        font-size: 20px;
+        margin: 10px 0px 0 -160px;
+    }
+
+    .form-control button {
+        padding: 4px 10px;
+        font-size: 18px;
+        margin: 10px 0 0 0;
+
+    }
+
+    #city {
+        font-size: 30px;
+    }
+
+    .container>.weatherInfo>#temp {
+        font-size: 25px;
+    }
+
+    .container>.weatherInfo>#weatherIcon {
+        width: 30%;
+        height: 60%;
+        margin-top: -10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 40%;
+        height: 90%;
+    }
+
+    .form-control {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+
+    .form-control label {
+        margin: -75px 0 0 80px;
+    }
+
+    .form-control input {
+        margin: 0 0 0 -150px;
+    }
+
+    #city {
+        margin-top: -15px;
+        font-size: 35px;
+    }
+
+    .container>.weatherInfo {
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .container>.weatherInfo>#temp {
+        font-size: 30px;
+    }
+
+    .container>.weatherInfo>#weatherIcon {
+        width: 30%;
+        height: 115%;
+        margin: 1rem 0;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        animation: bounce 2s infinite;
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 30%;
+        height: 90%;
+    }
+
+    .form-control {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0;
+    }
+
+    .form-control label {
+        margin: -75px 0 0 80px;
+    }
+
+    .form-control input {
+        margin: 0 0 0 -150px;
+    }
+
+    #city {
+        margin-top: -15px;
+        font-size: 35px;
+    }
+
+    .container>.weatherInfo {
+        width: 100%;
+        height: 30%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .container>.weatherInfo>#temp {
+        font-size: 30px;
+    }
+
+    .container>.weatherInfo>#weatherIcon {
+        width: 30%;
+        height: 120%;
+        margin: 1rem 0;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+        animation: bounce 2s infinite;
+        margin-top: 0px;
+    }
+}

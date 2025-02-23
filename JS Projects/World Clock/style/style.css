@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#clockBoard {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    border-radius: 20%;
+    z-index: 0;
+    background-color: black;
+
+    .cityForms {
+        overflow: hidden;
+        width: 25%;
+        height: 100vh;
+        position: relative;
+        z-index: 0;
+        margin: auto;
+        margin-left: 1px;
+        margin-right: 1px;
+        border-radius: 20%;
+
+        .clock {
+            position: absolute;
+            left: 25%;
+            font-family: russo One;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 28%;
+            font-size: 25px;
+            -webkit-text-stroke: .5px rgb(214, 231, 61);
+            color: black;
+            text-align: center;
+            border: none;
+            box-shadow: 0 0 20px 15px skyblue;
+            border-radius: 50%;
+            z-index: 1;
+            transform: translate(5%);
+            text-shadow:
+                0 0 0px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px rgb(41, 15, 103),
+                0 0 40px rgb(41, 15, 103),
+                0 0 55px rgb(41, 15, 103),
+                0 0 70px rgb(41, 15, 103),
+                0 0 100px rgb(41, 15, 103);
+        }
+
+        #clock1 {
+            top: 15%;
+
+        }
+
+        #clock2 {
+            top: 30%;
+        }
+
+        #clock3 {
+            top: 43%;
+
+        }
+
+        #clock4 {
+            top: 58%;
+        }
+
+        .cityName {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 50px;
+            top: 0px;
+            left: .5%;
+            font-size: 35px;
+            font-family: charm;
+            color: rgba(0, 0, 0, 0.612);
+            z-index: 3;
+            -webkit-text-stroke: 1px rgb(73, 111, 216);
+            text-shadow:
+                0 0 20px #fff,
+                0 0 40px rgb(0, 170, 255),
+                0 0 80px rgb(0, 170, 255),
+                0 0 100px rgb(0, 170, 255),
+                0 0 120px rgb(0, 170, 255),
+                0 0 140px rgb(0, 170, 255),
+                0 0 160px rgb(0, 170, 255);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .userInput {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            left: -0.5%;
+            top: -1%;
+            background: rgb(224, 224, 224);
+            font-size: 25px;
+            text-align: center;
+            outline: none;
+            border: none;
+            z-index: 2;
+        }
+
+        .cityPic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: auto;
+
+        }
+
+
+        .submit {
+            width: 50%;
+            height: 8%;
+            position: absolute;
+            bottom: 1%;
+            left: 25%;
+            background-color: rgb(26, 27, 27);
+            z-index: 2;
+            color: white;
+            text-shadow:
+                0 0 0px #fff,
+                0 0 2px #fff,
+                0 0 10px #fff,
+                0 0 30px rgb(238, 255, 0),
+                0 0 70px rgb(238, 255, 0),
+                0 0 80px rgb(238, 255, 0),
+                0 0 90px rgb(238, 255, 0),
+                0 0 135px rgb(238, 255, 0);
+            border-radius: 50%;
+            border: 3px double white;
+            transform: translate(5%);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #clockBoard {
+
+        .cityForms {
+            width: 100%;
+            height: 100vh;
+
+            .clock {
+                width: 60%;
+                height: 19%;
+                font-size: 15px;
+                left: 20%;
+            }
+
+            .cityName {
+                font-size: 30px;
+            }
+
+            .userInput {
+                font-size: 20px;
+            }
+
+            .submit {
+                width: 50%;
+                height: 8%;
+            }
+        }
+    }
+
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+    #clockBoard {
+
+        .cityForms {
+            width: 100%;
+            height: 100vh;
+
+            .clock {
+                width: 60%;
+                height: 30%;
+                font-size: 20px;
+                left: 20%;
+            }
+
+            .cityName {
+                font-size: 30px;
+            }
+
+            .userInput {
+                font-size: 20px;
+            }
+
+            .submit {
+                width: 50%;
+                height: 8%;
+            }
+        }
+    }
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+    #clockBoard {
+
+        .cityForms {
+            width: 30%;
+            height: 100vh;
+
+            .clock {
+                width: 45%;
+                height: 30%;
+                font-size: 20px;
+                left: 25%;
+            }
+
+            .cityName {
+                font-size: 30px;
+            }
+
+            .userInput {
+                font-size: 20px;
+            }
+
+            .submit {
+                width: 50%;
+                height: 8%;
+            }
+        }
+    }
+
+}

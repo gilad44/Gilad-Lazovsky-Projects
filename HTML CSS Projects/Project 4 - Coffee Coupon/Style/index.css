@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  /*********************************************** Main Section ************************************************/
+  #img-container {
+    width: 58%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /************************************************** Contact **************************************************/
+
+  #form-box {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 70%;
+    direction: rtl;
+    margin-top: 100px;
+
+    #form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      h1 {
+        font-family: heebo;
+        font-weight: 900;
+        font-size: 30px;
+        color: #020253;
+      }
+
+      p {
+        font-family: heebo;
+        font-weight: 600;
+        font-size: 14px;
+        color: #020253;
+      }
+
+      button {
+        width: 120px;
+        height: 33px;
+        background-color: #020253;
+        font-size: 15px;
+        font-family: heebo;
+        font-weight: 600;
+        letter-spacing: 0.33px;
+        color: #ffffff;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-family: heebo;
+          font-weight: 900;
+          font-size: 11px;
+          color: #2c2c2c;
+        }
+
+        input {
+          width: 300px;
+          height: 35px;
+          background-color: #e5eeff;
+          border: 0;
+          border-bottom: 4px solid #020253;
+        }
+      }
+    }
+  }
+}
+
+/************************************************** Mobile *****************************************************/
+
+@media(max-width:480px) {
+  #main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    #img-container {
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+
+      }
+    }
+
+    #form-box {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 100%;
+      margin: -100px 45px 100px 0px !important;
+
+      h1 {
+        text-align: center;
+        width: 260px;
+        font-size: 28px;
+        margin-right: -40px;
+      }
+
+      p {
+        margin-right: -40px;
+        width: 260px;
+        text-align: center;
+        font-size: 12px !important;
+      }
+
+      label {
+        margin-right: -20px;
+        font-size: 10px !important;
+      }
+
+      input {
+        margin-right: -20px;
+        width: 220px !important;
+        height: 20px !important;
+        border-bottom: 2px solid #020253 !important;
+
+      }
+
+      button {
+        margin-right: -20px;
+        margin-bottom: 50px;
+        margin-top: 10px;
+        width: 220px !important;
+        height: 25px !important;
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+@media(min-width:481px) and (max-width:768px) {
+  #main {
+    #img-container {
+      width: 50%;
+      height: 99%;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+
+    #form-box {
+      display: flex;
+      justify-content: center;
+      width: 45%;
+      height: 50%;
+      margin: 20px 0px 0 33px !important;
+
+      h1 {
+        font-size: 28px !important;
+      }
+
+      p {
+        margin-bottom: 10px;
+        font-size: 12px !important;
+      }
+
+      label {
+        font-size: 10px !important;
+      }
+
+      input {
+        width: 200px !important;
+        height: 20px !important;
+        border-bottom: 2px solid #020253 !important;
+
+      }
+
+      button {
+        width: 200px !important;
+        height: 25px !important;
+        font-size: 13px !important;
+      }
+    }
+  }
+}
+
+
+@media(min-width:769px) and (max-width:1024px) {
+  #main {
+    #img-container {
+      width: 50%;
+      height: 99%;
+    }
+
+
+    #form-box {
+      margin-top: 20px;
+    }
+  }
+}

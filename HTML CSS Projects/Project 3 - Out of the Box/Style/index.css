@@ -1,0 +1,642 @@
+* {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: heebo;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background-color: #0EE1E1;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 120px;
+  margin: 0 0px 0px 0px;
+  font-weight: 900;
+}
+
+#title #text h1 {
+  width: 300px;
+  height: 70px;
+  font-size: 43px;
+  font-weight: 900;
+}
+
+#title #text p {
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #020253;
+  margin-bottom: 35px;
+}
+
+#title img {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 120px;
+}
+
+#whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 40px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px 2px #e1dada;
+}
+
+#whatsapp img {
+  width: 35px;
+  height: 35px;
+}
+
+#services {
+  background-color: white;
+  padding: 30px 20px;
+  display: grid;
+  grid-template-rows: 200px;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap: 15px;
+}
+
+#services div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #F8F8F8;
+}
+
+#services div h3 {
+  color: #0EE1E1;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+#services div p {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+#services div img {
+  width: 40px;
+  height: 40px;
+  margin-top: 35px;
+}
+
+#contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 590px;
+  background-color: #F0FFFF;
+  margin-top: 15px;
+}
+
+#contact #map {
+  background-color: #0EE1E1;
+  padding: 50px;
+  margin-left: 350px;
+  margin-right: -160px;
+}
+
+#contact #map img {
+  width: 620px;
+  height: 480px;
+  margin-left: 20px;
+}
+
+#contact #form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 273px;
+  height: auto;
+  margin: 50px -220px 0px 0px;
+}
+
+#contact #form h1 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#contact #form p {
+  width: 270px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+#contact #form div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+#contact #form div input {
+  width: 273px;
+  height: 30px;
+  border: none;
+  border-bottom: 3px solid #0EE1E1;
+  background-color: #E5EEFF;
+  margin-bottom: -10px;
+}
+
+#contact #form div label {
+  font-size: 9px;
+  font-weight: 900;
+  width: 80px;
+}
+
+#contact #form div textarea {
+  width: 273px;
+  height: 90px;
+  background-color: #E5EEFF;
+  border: none;
+  border-bottom: 3px solid #0EE1E1;
+}
+
+#contact #form #send {
+  font-weight: bold;
+  width: 273px;
+  height: 30px;
+  background-color: #0EE1E1;
+  margin: 15px 0px 0px 0px;
+  border: none;
+}
+
+#social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 80px;
+  top: 1230px;
+  right: 460px;
+}
+
+#social div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0EE1E1;
+  margin-top: 45px;
+}
+
+#bottom-stripe {
+  width: 100%;
+  height: 12px;
+  background-color: #0EE1E1;
+  margin-top: 50px;
+}
+
+@media (max-width: 480px) {
+  #main #title {
+    margin-top: 50px;
+    width: 100px;
+    height: 120px;
+    font-weight: 900;
+  }
+  #main #title #text h1 {
+    width: 210px;
+    height: 70px;
+    font-size: 33px;
+    font-weight: 900;
+  }
+  #main #title #text p {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #020253;
+    margin-bottom: 45px;
+  }
+  #main #title img {
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+    margin-right: 10px;
+  }
+  #main #whatsapp {
+    top: 25px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+  }
+  #main #whatsapp img {
+    width: 20px;
+    height: 20px;
+  }
+  #services {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 13px;
+    grid-template-rows: 160px;
+    gap: 10px;
+  }
+  #services div {
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  #services div img {
+    width: 35px;
+    height: 35px;
+  }
+  #services #employees p {
+    padding-bottom: 7px;
+  }
+  #services #regional p {
+    padding-bottom: 4px;
+  }
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 490px;
+    margin-top: 0;
+  }
+  #contact #map {
+    width: 84%;
+    height: auto;
+    padding: 20px 30px;
+    margin: 20px 0 0px 0;
+    order: 2;
+  }
+  #contact #map img {
+    width: 95%;
+    height: 90%;
+    margin: 13px 8px 0 0;
+  }
+  #contact #form {
+    align-items: flex-start;
+    justify-content: flex-start;
+    order: 1;
+    margin: 50px 0px 0px 100px;
+  }
+  #contact #form h1 {
+    margin-right: 30px;
+  }
+  #contact #form p {
+    margin-right: 30px;
+    font-size: 13px;
+  }
+  #contact #form div input {
+    width: 303px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid #0EE1E1;
+    background-color: #E5EEFF;
+    margin-bottom: -10px;
+    margin-right: 30px;
+  }
+  #contact #form div label {
+    font-size: 10px;
+    font-weight: 900;
+    width: 80px;
+    margin-right: 30px;
+  }
+  #contact #form div textarea {
+    width: 303px;
+    height: 90px;
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 3px solid #0EE1E1;
+    margin-right: 30px;
+  }
+  #contact #form #send {
+    font-size: 17px;
+    font-weight: bold;
+    width: 303px;
+    height: 33px;
+    background-color: #0EE1E1;
+    margin: 15px 30px 0px 0px;
+    border: none;
+  }
+  #social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    margin-top: 300px;
+  }
+  #social div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0EE1E1;
+    margin-right: 20px;
+  }
+  #social div img {
+    width: 50%;
+    height: 50%;
+  }
+  #bottom-stripe {
+    width: 100%;
+    height: 12px;
+    background-color: #0EE1E1;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #main #title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 120px;
+    margin: 50px 0px 0px 0px;
+    font-weight: 900;
+  }
+  #main #title #text h1 {
+    width: 300px;
+    height: 70px;
+    font-size: 43px;
+    font-weight: 900;
+  }
+  #main #title #text p {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #020253;
+    margin-bottom: 35px;
+  }
+  #main #title img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 80px;
+  }
+  #main #whatsapp {
+    top: 35px;
+    left: 25px;
+    width: 55px;
+    height: 55px;
+  }
+  #main #whatsapp img {
+    width: 30px;
+    height: 30px;
+  }
+  #services {
+    padding: 30px 13px;
+    grid-template-rows: 160px;
+    gap: 10px;
+  }
+  #services div {
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  #services div img {
+    width: 35px;
+    height: 35px;
+  }
+  #services #employees p {
+    padding-bottom: 7px;
+  }
+  #services #regional p {
+    padding-bottom: 4px;
+  }
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 490px;
+    margin-top: 0;
+  }
+  #contact #map {
+    width: 92% !important;
+    height: auto !important;
+    padding: 20px 30px;
+    margin: 76px 0 0px 0 !important;
+    order: 2;
+  }
+  #contact #map img {
+    width: 95%;
+    height: 90%;
+    margin: 30px 16px 0 0;
+  }
+  #contact #form {
+    align-items: flex-start;
+    justify-content: flex-start;
+    order: 1;
+    margin: 50px 0px 0px 210px;
+  }
+  #contact #form p {
+    font-size: 13px;
+  }
+  #contact #form div input {
+    width: 473px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid #0EE1E1;
+    background-color: #E5EEFF;
+    margin-bottom: -10px;
+  }
+  #contact #form div label {
+    font-size: 10px;
+    font-weight: 900;
+    width: 80px;
+  }
+  #contact #form div textarea {
+    width: 473px;
+    height: 90px;
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 3px solid #0EE1E1;
+  }
+  #contact #form #send {
+    font-size: 17px;
+    font-weight: bold;
+    width: 473px;
+    height: 33px;
+    background-color: #0EE1E1;
+    margin: 15px 0px 0px 0px;
+    border: none;
+  }
+  #social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    margin-top: 600px !important;
+  }
+  #social div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0EE1E1;
+    margin-right: 20px;
+  }
+  #bottom-stripe {
+    width: 100%;
+    height: 12px;
+    background-color: #0EE1E1;
+    margin-top: 50px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #main #title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 120px;
+    margin: 50px 0px 0px 0px;
+    font-weight: 900;
+  }
+  #main #title #text h1 {
+    width: 300px;
+    height: 70px;
+    font-size: 43px;
+    font-weight: 900;
+  }
+  #main #title #text p {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #020253;
+    margin-bottom: 35px;
+  }
+  #main #title img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 80px;
+  }
+  #main #whatsapp {
+    top: 35px;
+    left: 25px;
+    width: 55px;
+    height: 55px;
+  }
+  #main #whatsapp img {
+    width: 30px;
+    height: 30px;
+  }
+  #services {
+    padding: 30px 13px;
+    grid-template-rows: 160px;
+    gap: 10px;
+  }
+  #services div {
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  #services div img {
+    width: 35px;
+    height: 35px;
+  }
+  #services #employees p {
+    padding-bottom: 7px;
+  }
+  #services #regional p {
+    padding-bottom: 4px;
+  }
+  #contact {
+    height: 490px;
+    margin-top: 0px;
+  }
+  #contact #map {
+    width: 74%;
+    height: auto;
+    padding: 20px 30px;
+    margin: 0px 0 0px 0;
+  }
+  #contact #map img {
+    width: 95%;
+    height: 90%;
+    margin: 20px 11px 13px 0;
+  }
+  #contact #form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+    width: 50%;
+  }
+  #contact #form h1 {
+    width: 270px;
+  }
+  #contact #form p {
+    font-size: 13px;
+  }
+  #contact #form div input {
+    width: 273px;
+    height: 30px;
+    border: none;
+    border-bottom: 3px solid #0EE1E1;
+    background-color: #E5EEFF;
+    margin-bottom: -10px;
+  }
+  #contact #form div label {
+    font-size: 10px;
+    font-weight: 900;
+    width: 80px;
+  }
+  #contact #form div textarea {
+    width: 273px;
+    height: 90px;
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 3px solid #0EE1E1;
+  }
+  #contact #form #send {
+    font-size: 17px;
+    font-weight: bold;
+    width: 273px;
+    height: 33px;
+    background-color: #0EE1E1;
+    margin: 15px 0px 0px 0px;
+    border: none;
+  }
+  #social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+  }
+  #social div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0EE1E1;
+    margin-right: 20px;
+  }
+  #bottom-stripe {
+    width: 100%;
+    height: 12px;
+    background-color: #0EE1E1;
+  }
+}

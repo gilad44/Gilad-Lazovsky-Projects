@@ -1,0 +1,11 @@
+// Workspace settings
+{
+    // The following will hide the css and map files
+    "files.exclude": {
+        "**/*.css": true,
+        "**/*.map": true
+    },
+    "liveSassCompile.settings.compileOnWatch": false,
+    "liveSassCompile.settings.showAnnouncements": false,
+    "liveSassCompile.settings.showOutputWindowOn": "None"
+}

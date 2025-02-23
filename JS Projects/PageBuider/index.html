@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<html dir="rtl">
+
+</html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,regular,500,600,700,800" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/index.js" defer></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="outter">
+            <div id="menu">
+                <h2>בונה מסך</h2>
+                <p id="instructions">בחר אלמנט ועיצובים, בסיום לחץ "הוסף" ו\או "שמור". למחיקת הלוח כולו לחץ "מחק לוח"
+                </p>
+                <label for="elementType" class="inpuTitle">סוג אלמנט</label>
+                <select id="elementType" class="inputSelect">
+                    <option selected disabled>בחר סוג אלמנט</option>
+                    <option value="div">קופסה</option>
+                    <option value="p">פסקה</option>
+                    <option value="input">שדה למילוי</option>
+                    <option value="label">תגית</option>
+                    <option value="textarea">שדה למלל חופשי</option>
+                    <option value="button">כפתור</option>
+                    <option value="ul">רשימה ללא סדר</option>
+                    <option value="ol">רשימה מסודרת</option>
+                    <option value="li">פריט רשימה</option>
+                </select>
+                <label for="elementID" class="inpuTitle">תגית זיהוי</label>
+                <input type="text" id="elementID" class="uInput" placeholder="הקלד מזהה ייחודי לאלמנט (באנגלית)">
+                <div id="width"><label for="widthInput" class="inpuTitle">רוחב</label>
+                    <input type="text" id="widthInput" class="uInput" placeholder="רוחב (px)">
+                </div>
+                <div id="height"><label for="heightInput" class="inpuTitle">גובה</label>
+                    <input type="text" id="heightInput" class="uInput" placeholder="גובה (px)">
+                </div>
+                <label for="bgColor" class="inpuTitle">צבע רקע</label>
+                <input class="selectedColor uInput" id="bgColor" placeholder="הקלד או בחר צבע"></input>
+                <div id="bgPallette">
+                </div>
+                <label for="frame" class="inpuTitle">סגנון מסגרת</label>
+                <select id="frame" class="inputSelect">
+                    <option selected disabled>בחר סגנון מסגרת</option>
+                    <option value="solid">רציף</option>
+                    <option value="dashed">מקווקוו</option>
+                    <option value="dotted">מנוקד</option>
+                    <option value="double">כפול</option>
+                    <option value="groove">שקוע</option>
+                    <option value="inset">פנימה</option>
+                    <option value="none">ללא</option>
+                </select>
+                <input type="text" id="frameWidth" class="uInput" placeholder="עובי מסגרת (px)">
+                <label for="frameColor" class="inpuTitle">צבע מסגרת</label>
+                <input class="selectedColor uInput" id="frameColor" placeholder="הקלד או בחר צבע"></input>
+                <div id="borderPallette">
+                </div>
+
+                <label for="frameRadius" class="inpuTitle">עיגול פינות</label>
+                <input type="text" id="frameRadius" class="uInput" placeholder="עיגול פינות (%)">
+                <label for="boxShadowColor" class="inpuTitle">הצללה</label>
+                <input type="text" id="boxShadowX" class="uInput" placeholder="רוחב ההצללה (px)">
+                <input type="text" id="boxShadowY" class="uInput" placeholder="גובה ההצללה (px)">
+                <input class="selectedColor uInput" id="boxShadowColor" placeholder="הקלד או בחר צבע הצללה"></input>
+                <div id="shadowPallette">
+                </div>
+                <label for="content" class="inpuTitle">תוכן</label>
+                <textarea id="content" placeholder="הכנס טקסט כאן"></textarea>
+                <label for="titleSize" class="inpuTitle">גודל כותרת</label>
+                <select id="titleSize" class="inputSelect">
+                    <option selected disabled>בחר גודל כותרת</option>
+                    <option value="h1">h1</option>
+                    <option value="h2">h2</option>
+                    <option value="h3">h3</option>
+                    <option value="h4">h4</option>
+                    <option value="h5">h5</option>
+                    <option value="h6">h6</option>
+                </select>
+                <label for="title" class="inpuTitle">טקסט כותרת</label>
+                <input type="text" id="title" class="uInput" placeholder="הקלד טקסט כותרת">
+
+                <label for="fontColor" class="inpuTitle">צבע גופן</label>
+                <input type="text" id="fontColor" class="uInput" placeholder="שם צבע באנגלית או hex">
+                <div id="textPallette">
+                </div>
+                <div id="textSize">
+                    <label for="fontSize" class="inpuTitle" style="color: black;">גודל גופן</label>
+                    <input type="text" class="uInput" id="fontSize" placeholder="(px)">
+                </div>
+
+                <label for="fontFam" class="inpuTitle" style="color: black;">סוג גופן</label>
+                <select id="fontFam" class="inputSelect">
+                    <option selected disabled>בחר גופן</option>
+                    <option value="'Courier New', Courier, monospace">'Courier New', Courier, monospace</option>
+                    <option value="'Times New Roman', Times, serif ;">'Times New Roman', Times, serif</option>
+                    <option value="Arial, Helvetica, sans-serif">Arial, Helvetica, sans-serif</option>
+                    <option value="Cambria, Cochin, Georgia, Times">Cambria, Cochin, Georgia, Times</option>
+                    <option value="'Franklin Go thic Medium', 'Arial Narrow', Arial, sans-serif">'Franklin Gothic
+                        Medium',
+                        'Arial Narrow', Arial, sans-serif</option>
+                </select>
+
+                <label for="padding" class="inpuTitle" style="color: black;">ריווח פנימי</label>
+                <input type="text" id="padding" class="uInput" placeholder="ריווח פנימי (px)">
+                <label for="margin" class="inpuTitle" style="color: black;">ריווח חיצוני</label>
+                <input type="text" id="margin" class="uInput" placeholder="ריווח חיצוני (px)">
+                <div id="buttons">
+                    <button type="submit" id="add">הוסף</button>
+                    <button type="submit" id="save">שמור</button>
+                    <button type="button" id="clearHistory">נקה הסטוריה</button>
+                    <button type="button" id="clearBoard">מחק לוח</button>
+                    <button type="button" id="restore">שחזר הסטוריה</button>
+                </div>
+            </div>
+        </div>
+        <div id="workArea">
+        </div>
+    </div>
+</body>
+
+</html>

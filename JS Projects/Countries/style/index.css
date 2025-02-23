@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#vidBox {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  video {
+    z-index: -1;
+    object-fit: cover;
+    width: 150%;
+    height: 150vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#title {
+-webkit-text-stroke: rgb(14, 15, 12) 1px;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 100;
+}
+#subTitle {
+  position: relative;
+  -webkit-text-stroke: rgb(0, 1, 1) .5Ppx;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 100;
+}
+  .glow {
+  font-size: 17px;
+  color: #fff;
+  text-align: left;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+  -webkit-text-stroke: .2px black;
+}
+
+
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e6fe7, 0 0 40px #2e6fe7, 0 0 50px #2e6fe7;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #f7ff9e, 0 0 40px #f7ff9e, 0 0 50px #f7ff9e;
+  }
+}
+
+
+
+
+.fa {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes waveFlag {
+  0% {
+    transform: perspective(1000px) rotateX(10deg) translateX(0%) translateY(0%)
+      translateZ(0px) scaleX(1);
+  }
+  50% {
+    transform: perspective(1000px) rotateX(15deg) translateX(1%) translateY(0%)
+      scaleX(0.9) translateZ(10px);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(10deg) translateX(0%) translateY(0%)
+      scaleX(1) translateZ(0px);
+  }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Caesar+Dressing:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=MedievalSharp:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Uncial+Antiqua:regular" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="./scripts/script.js" defer></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+    <h1 id="winText"></h1>
+    <div id="flash"></div>
+    <h1 id="game-over">GAME OVER</h1>
+    <div id="game-container">
+        <div id="gallows">
+            <svg width="500" height="250" viewBox="0 0 200 250" preserveAspectRatio="xMidYMid meet"
+                xmlns="http://www.w3.org/2000/svg" transform="scale(-1, 1)">
+                <defs>
+                    <pattern id="woodTexture" patternUnits="userSpaceOnUse" width="10" height="3">
+                        <path d="M0,5 Q2,8 4,5 T10,5" stroke="rgb(96, 73, 16)" stroke-width="3" fill="none" />
+                    </pattern>
+
+                    <clipPath id="clipBeam">
+                        <rect x="45" y="5" width="0" height="15" />
+                    </clipPath>
+                    <clipPath id="clipRope">
+                        <rect x="220" y="15" width="0" height="43" />
+                    </clipPath>
+                    <clipPath id="clipHead">
+                        <circle cx="222" cy="74" r="0" stroke="black" stroke-width="3" fill="rgb(247,193,155)"
+                            class="head" />
+                    </clipPath>
+                    <clipPath id="clipBody">
+                        <rect x="220" y="90" width="0" height="45" />
+                    </clipPath>
+                    <clipPath id="clipLeftArm">
+                        <rect x="200" y="110" width="0" height="20" />
+                    </clipPath>
+                    <clipPath id="clipRightArm">
+                        <rect x="222" y="110" width="0" height="20" />
+                    </clipPath>
+                    <clipPath id="clipLeftLeg">
+                        <rect x="202" y="134" width="0" height="30" />
+                    </clipPath>
+                    <clipPath id="clipRightLeg">
+                        <rect x="222" y="134" width="0" height="30" />
+                    </clipPath>
+                    <clipPath id="clipFullBody">
+                        <rect x="180" y="15" width="100" height="200" />
+                    </clipPath>
+                </defs>
+
+                <rect x="65" y="5" width="180" height="15" fill="rgb(165, 130, 41)" stroke="black" stroke-width="2"
+                    clip-path="url(#clipBeam)" class="horizontal-beam " />
+                <rect x="65" y="5" width="180" height="15" fill="url(#woodTexture)" opacity="0.8"
+                    clip-path="url(#clipBeam)" class="horizontal-beam" />
+
+                <line x1="220" y1="20" x2="220" y2="65" stroke="gold" stroke-width="5" clip-path="url(#clipRope)"
+                    class="rope" />
+
+                <circle cx="222" cy="74" r="0" stroke="black" stroke-width="3" fill="rgb(247,193,155)"
+                    clip-path="url(#clipHead)" class="head" />
+
+                <line x1="222" y1="90" x2="222" y2="140" stroke="black" stroke-width="3" clip-path="url(#clipBody)"
+                    class="body" />
+
+                <line x1="222" y1="110" x2="200" y2="130" stroke="black" stroke-width="3" clip-path="url(#clipLeftArm)"
+                    class="arms" />
+                <line x1="222" y1="110" x2="240" y2="130" stroke="black" stroke-width="3" clip-path="url(#clipRightArm)"
+                    class="arms" />
+
+                <line x1="222" y1="134" x2="200" y2="170" stroke="black" stroke-width="3" clip-path="url(#clipLeftLeg)"
+                    class="legs" />
+                <line x1="222" y1="134" x2="240" y2="170" stroke="black" stroke-width="3" clip-path="url(#clipRightLeg)"
+                    class="legs" />
+                <g clip-path="url(#clipFullBody)" class="full-body" style="visibility: hidden; opacity: 0;">
+                    <line x1="220" y1="20" x2="220" y2="70" stroke="gold" stroke-width="5" class="rope-final" />
+                    <circle cx="225" cy="87" r="15" stroke="black" stroke-width="3" fill="rgb(247,193,155)"
+                        class="head-final" />
+                    <line x1="217" y1="99" x2="222" y2="135" stroke="black" stroke-width="3" class="body-final" />
+                    <line x1="218" y1="110" x2="213" y2="145" stroke="black" stroke-width="3" class="left-arm-final" />
+                    <line x1="218" y1="110" x2="230" y2="145" stroke="black" stroke-width="3" class="right-arm-final" />
+                    <line x1="222" y1="134" x2="215" y2="180" stroke="black" stroke-width="3" class="left-leg-final" />
+                    <line x1="222" y1="134" x2="225" y2="180" stroke="black" stroke-width="3" class="right-leg-final" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div id="levelParchment">
+        <div id="level">
+            <select id="level-select">
+                <option value="Select level" disabled selected>Select level</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+        </div>
+        </select>
+    </div>
+    </div>
+    <div id="wordParchment">
+        <div id="chosen-word"></div>
+    </div>
+    <div id="form-area">
+
+        <form>
+            <button type="submit" id="submit">Submit</button>
+            <input type="text" id="word-input">
+        </form>
+        <div id="buttons">
+            <button type="button" id="start">Start</button>
+            <div id="keyboard-container">
+                <div id="keyboard-top"></div>
+                <div id="keyboard-bottom"></div>
+            </div>
+            <button type="button" id="reset">Reset</button>
+        </div>
+    </div>
+</body>
+
+</html>
