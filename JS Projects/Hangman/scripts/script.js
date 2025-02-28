@@ -1,3 +1,70 @@
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+function createReverbEffect(audioElement, reverbLevel = 0.5) {
+    const source = audioContext.createMediaElementSource(audioElement);
+    const convolver = audioContext.createConvolver();
+    const gainNode = audioContext.createGain();
+
+    // Create impulse response for reverb
+    const sampleRate = audioContext.sampleRate;
+    const length = sampleRate * 2; // 2 seconds
+    const impulse = audioContext.createBuffer(2, length, sampleRate);
+
+    for (let channel = 0; channel < 2; channel++) {
+        const channelData = impulse.getChannelData(channel);
+        for (let i = 0; i < length; i++) {
+            channelData[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / length, 3);
+        }
+    }
+
+    convolver.buffer = impulse;
+    gainNode.gain.value = reverbLevel * 1.5;
+
+    // Connect nodes
+    source.connect(audioContext.destination); // Direct sound
+    source.connect(convolver); // Reverb path
+    convolver.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    return { convolver, gainNode };
+}
+const bgMusic1 = document.getElementById('bgMusic1');
+const bgMusic2 = document.getElementById('bgMusic2');
+
+function setupMusicLoop() {
+    bgMusic1.volume = .5;
+    bgMusic2.volume = .5;
+
+    bgMusic1.play();
+    // setTimeout(() => {
+    //     bgMusic1.volume = 0.5;
+    // }, 4000);
+
+    bgMusic1.addEventListener('timeupdate', () => {
+        if (bgMusic1.currentTime >= bgMusic1.duration - 10 && !bgMusic2.playing) {
+            bgMusic2.play();
+        }
+    });
+
+    bgMusic2.addEventListener('timeupdate', () => {
+        if (bgMusic2.currentTime >= bgMusic2.duration - 10 && !bgMusic1.playing) {
+            bgMusic1.currentTime = 0;
+            bgMusic1.play();
+        }
+    });
+
+    bgMusic1.addEventListener('ended', () => {
+        bgMusic1.currentTime = 0;
+    });
+
+    bgMusic2.addEventListener('ended', () => {
+        bgMusic2.currentTime = 0;
+    });
+}
+
+const applause = document.getElementById('applause');
+const fanfare = document.getElementById('fanfare');
+
 const keyboard = document.querySelector('#keyboard-container');
 const topKeys = document.querySelector('#keyboard-top');
 const bottomKeys = document.querySelector('#keyboard-bottom');
@@ -39,6 +106,9 @@ const levelSelect = document.querySelector('#level-select');
 const start = document.querySelector('#start');
 levelSelect.addEventListener('change', () => {
     chosenWord.innerHTML = '';
+});
+levelSelect.addEventListener('click', () => {
+    setupMusicLoop();
 });
 start.addEventListener('click', () => {
     const level = levelSelect.value;
@@ -205,6 +275,14 @@ const gameLogic = async (word, level) => {
             .join('');
 
         if (currentWord === chosenWord.join('')) {
+            applause.volume = 1;
+            fanfare.volume = 1;
+            applause.play();
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            const fanfareReverb = createReverbEffect(fanfare, 1);
+            fanfare.play();
             const winWords = ["AWESOME !!", "VICTORY !!", "COOL !!", "YOU     WIN !!", "AMAZING !!", "BOOM !!", "YOU     ROCK !!", "KA-POW !!"];
             const chosenWinWord = winWords[Math.floor(Math.random() * winWords.length)];
 
@@ -364,6 +442,16 @@ const handleWrongAnswer = () => {
             animateFill("#clipRightLeg", 30);
             break;
         case 9:
+            const thunder = document.getElementById('thunder');
+            thunder.volume = .5;
+            const bell = document.getElementById('bell');
+            bell.volume = .5;
+            if (audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            const bellReverb = createReverbEffect(bell, 1);
+            thunder.play();
+            bell.play();
             const fullBody = document.querySelector('.full-body');
             fullBody.classList.add('game-over');
             document.querySelectorAll('.head, .body, .arms, .legs, .rope').forEach(el => {
